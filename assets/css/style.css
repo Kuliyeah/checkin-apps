@@ -1,0 +1,27 @@
+body{
+    font-family: "LatoRegular";
+}
+
+.login-bg{
+    background-image: url(../image/background.jpg);
+    background-size: cover;
+}
+
+.pos-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.custom-card-login{
+    background-color: #F2FFFB;
+    padding: 20px;
+}
+
+.header-text{
+    font-size: 24px;
+    font-family: "LatoBlack" !important;
+    font-weight: bold;
+}
