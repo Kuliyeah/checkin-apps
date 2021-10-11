@@ -25,3 +25,46 @@ body {
     font-family: "LatoBlack" !important;
     font-weight: bold;
 }
+
+
+/* Dashboard */
+.side-bar{
+    width: 305px;
+    background-color: #F2FFFB;
+    height: 100vh;
+}
+
+.profil-photo{
+    width: 100px;
+    border-radius: 100%;
+    
+}
+
+.menu ul li{
+    list-style: none;
+}
+
+.menu ul li a{
+    background-color: #ECECEC;
+    display: block;
+    margin-left: -30px;
+}
+
+.menu ul li a:hover{
+    background-color: #5DD482;
+}
+
+.button button{
+    padding: 5px 30px;
+    background-color: #5DD482;
+}
+
+.button button:hover{
+    background-color: #007c27;
+}
+
+.button{
+    position: absolute;
+    bottom: 16px;
+    left: 100px;
+}
