@@ -15,54 +15,92 @@
 </head>
 
 <body style="background-color: #F6F6F6;">
-    <div class="container p-5" style="background-color: #FFFFFF;">
-        <div class="row">
-            <div class="col-lg-12"><br />
-                <ol class="breadcrumb">
-                    <li>Data Master</li>
-                    <li class="active"><a href="data_pengunjung.html">Data Pengguna</a></li>
-                </ol>
+    <div class="d-flex">
+        <div class="side-bar overflow-hidden p-3">
+            <div class="top-side-bar text-center">
+                <div class="profil">
+                    <img class="profil-photo" src="../assets/image/profil.jpg" alt="">
+                </div>
+                <h3 class="mt-2">Nama Admin</h3>
+                <p>Username <span>admin123</span> </p>
             </div>
+            <hr class="mt-5">
+            <div class="menu text-center">
+                <ul>
+                    <li class="mt-5"><a href="dashboard.html" class="text-decoration-none p-3 rounded-3 active">Home</a></li>
+                    <li class="mt-2"><a href="data_mitra.html" class="text-decoration-none p-3 rounded-3">Data Mitra</a></li>
+                    <li class="mt-2"><a href="data_pengunjung.html" class="text-decoration-none p-3 rounded-3">Data Pengunjung</a></li>
+                </ul>
+            </div>
+            <div class="button"><button class="border-0 rounded-3">Keluar</button></div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Data Pengguna
-                    </div>
+        <div class="container p-5" style="background-color: #FFFFFF;">
+            <div class="row">
+                <div class="col-lg-12"><br />
+                    <ol class="breadcrumb">
+                        <li>Data Master</li>
+                        <li class="active"><a href="data_pengunjung.html">Data Pengunjung</a></li>
+                    </ol>
+                </div>
+            </div>
 
-                    <div class="panel-body">
-                        <table id="example" class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">Nama Lengkap</th>
-                                    <th scope="col">No. Telp</th>
-                                    <th scope="col">Kode Pos</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark Jacob</td>
-                                    <td>082123304428</td>
-                                    <td>40287(Kab. Bandung)</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Otto Thornton</td>
-                                    <td>082123304428</td>
-                                    <td>40274(Kota Bandung)</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>@mdo @fat</td>
-                                    <td>082123304428</td>
-                                    <td>40282(Bandung Barat)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Data Pengunjung
+                        </div>
+
+                        <div class="panel-body">
+                            <a href="#">
+                                <button class="btn btn-primary mt-1 mb-3">Create New Data</button>
+                            </a>
+
+                            <table id="example" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Nama Lengkap</th>
+                                        <th scope="col">No. Telp</th>
+                                        <th scope="col">Kode Pos</th>
+                                        <th scope="col">Opsi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark Jacob</td>
+                                        <td>082123304428</td>
+                                        <td>40287(Kab. Bandung)</td>
+                                        <td>
+                                            <a href="#">Update</a> |
+                                            <a href="#">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Otto Thornton</td>
+                                        <td>082123304428</td>
+                                        <td>40274(Kota Bandung)</td>
+                                        <td>
+                                            <a href="#">Update</a> |
+                                            <a href="#">Delete</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>@mdo @fat</td>
+                                        <td>082123304428</td>
+                                        <td>40282(Bandung Barat)</td>
+                                        <td>
+                                            <a href="#">Update</a> |
+                                            <a href="#">Delete</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
