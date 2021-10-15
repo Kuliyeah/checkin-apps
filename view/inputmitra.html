@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Input Mitra</title>
+</head>
+    <body>
+        <div class="d-flex">
+            <div class="side-bar overflow-hidden p-3">
+                <div class="top-side-bar text-center">
+                    <div class="profil">
+                        <img class="profil-photo" src="../assets/image/profil.jpg" alt="">
+                    </div>
+                    <h3 class="mt-2">Nama Admin</h3>
+                    <p>Username <span>admin123</span> </p>
+                </div>
+                <hr class="mt-5">
+                <div class="menu text-center">
+                    <ul>
+                        <li class="mt-5"><a href="#" class="text-decoration-none p-3 rounded-3 active">Home</a></li>
+                        <li class="mt-2"><a href="inputmitra.html" class="text-decoration-none p-3 rounded-3" style="background-color: #5DD482" >Data Mitra</a></li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none p-3 rounded-3">Data Pengunjung</a></li>
+                    </ul>
+                </div>
+                <div class="button"><button class="border-0 rounded-3">Keluar</button></div>
+                
+            </div>
+
+            <div class="p-3" style="width: 100%;">
+                <p class="directory" style="border:1px solid #E4E4E4; padding: 6px 6px 6px 8px;">Data Master / Data Mitra / <b>Input Mitra</b></p>
+                <div class="container mt-5">
+                    <form class="row justify-content-center">
+                        <div class="col-6">
+                            <label for="form-mitra" class="form-label">Nama Mitra</label>
+                            <input type="text" class="form-control" id="form-mitra">
+
+                            <label for="form-mitra2" class="form-label">Alamat Mitra</label>
+                            <input type="text" class="form-control" id="form-mitra2">                            
+                   
+
+                            <label for="form-mitra3" class="form-label">Bidang Usaha</label>
+                            <input type="text" class="form-control" id="form-mitra3">                           
+
+                            <label for="form-mitra4" class="form-label">Deskripsi Usaha</label>
+                            <textarea type="text" class="form-control" id="form-mitra4" rows="6"></textarea>                            
+                        </div>                            
+                    </form>
+                    <div class=" button-form">
+                        <button class="border-1 rounded-3" id="btn-batal">Batalkan</button>
+                        <button class="border-0 rounded-3" id="btn-simpan">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="./../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</html>
