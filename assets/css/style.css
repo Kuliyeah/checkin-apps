@@ -74,25 +74,12 @@ body {
     left: 5%;
 }
 
+
 /* Input Mitra */
-.button-form{
+
+.button-form {
     align-items: center;
     padding-top: 10px;
     margin-left: 62%;
     position: relative;
-}
-#btn-batal{
-    border-color: #C4C4C4;
-    background-color: white;
-    padding: 5px;
-}
-#btn-simpan{
-    background-color: #5DD482;
-    padding: 5px;
-}
-#btn-batal:hover{
-    background-color: #FF6969;
-}
-#btn-simpan:hover{
-    background-color: #007c27;
 }
