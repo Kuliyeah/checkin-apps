@@ -50,10 +50,10 @@ body {
 }
 
 .menu ul li a {
-    background-color: #ECECEC;
     display: block;
     margin-left: -30px;
     color: black;
+    border-bottom: 0.25px solid black;
 }
 
 .menu ul li a:hover {
