@@ -53,7 +53,7 @@ body {
     display: block;
     margin-left: -30px;
     color: black;
-    border-bottom: 0.25px solid black;
+    border-bottom: 1px solid rgb(204, 204, 204);
 }
 
 .menu ul li a:hover {
