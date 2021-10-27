@@ -53,6 +53,7 @@ body {
     background-color: #ECECEC;
     display: block;
     margin-left: -30px;
+    color: black;
 }
 
 .menu ul li a:hover {
