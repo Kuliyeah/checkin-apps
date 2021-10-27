@@ -33,7 +33,7 @@
                     <li class="mt-2"><a href="data_pengunjung.html" class="text-decoration-none p-3 rounded-3">Data Pengunjung</a></li>
                 </ul>
             </div>
-            <div class="button"><button class="border-0 rounded-3">Keluar</button></div>
+            <div class="button"><button class="border-0 rounded-3" id="keluar">Keluar</button></div>
         </div>
 
         <div class="pt-5 container col-md-9" style="background-color: #FFFFFF;">
@@ -102,11 +102,15 @@
 <script type="text/javascript" src="./../node_modules/datatables/media/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="./../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="./../node_modules/bootstrap/dist/js/dataTables.bootstrap.min.js"></script>
-
 <script>
     $(document).ready(function() {
         $('#example').DataTable({
             responsive: true
+        });
+
+        $("#keluar").click(function() {
+            window.alert("Anda berhasil logout");
+            window.location.href = "../index.html";
         });
     });
 </script>

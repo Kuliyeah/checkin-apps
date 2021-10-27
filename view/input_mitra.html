@@ -36,7 +36,7 @@
                             Pengunjung</a></li>
                 </ul>
             </div>
-            <div class="button"><button class="border-0 rounded-3">Keluar</button></div>
+            <div class="button"><button class="border-0 rounded-3" id="keluar">Keluar</button></div>
         </div>
 
         <div class="container p-3" style="width: 100%;">
@@ -71,13 +71,31 @@
                     </div>
                 </form>
                 <div class="button-form">
-                    <button class="btn btn-danger">Batalkan</button>
-                    <button class="btn btn-success">Simpan</button>
+                    <button class="btn btn-danger" id="back">Batalkan</button>
+                    <button class="btn btn-success" id="save">Simpan</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script type="text/javascript" src="./../node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="./../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#back").click(function() {
+            window.history.back();
+        });
+
+        $("#save").click(function() {
+            window.alert("Data Berhasil Disimpan!");
+            window.history.back();
+        });
+
+        $("#keluar").click(function() {
+            window.alert("Anda berhasil logout");
+            window.location.href = "../index.html";
+        });
+    });
+</script>
 
 </html>
