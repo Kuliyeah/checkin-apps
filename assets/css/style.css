@@ -2,6 +2,10 @@ body {
     font-family: "LatoRegular";
 }
 
+a {
+    text-decoration: none;
+}
+
 .login-bg {
     background-image: url(../image/background.jpg);
     background-size: cover;
@@ -38,6 +42,7 @@ body {
     width: 305px;
     background-color: #F2FFFB;
     height: 100vh;
+    border-right: 1px solid rgb(219, 219, 219);
 }
 
 .profil-photo {
@@ -60,27 +65,12 @@ body {
     background-color: #5DD482;
 }
 
-.button button {
-    padding: 5px 30px;
+.active {
     background-color: #5DD482;
-}
-
-.button button:hover {
-    background-color: #007c27;
 }
 
 .button {
     position: absolute;
     bottom: 16px;
-    left: 5%;
-}
-
-
-/* Input Mitra */
-
-.button-form {
-    align-items: center;
-    padding-top: 10px;
-    margin-left: 62%;
-    position: relative;
+    left: 115px;
 }
