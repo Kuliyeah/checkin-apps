@@ -6,11 +6,6 @@ a {
     text-decoration: none;
 }
 
-.login-bg {
-    background-image: url(../image/background.jpg);
-    background-size: cover;
-}
-
 .pos-center {
     position: absolute;
     top: 50%;
@@ -19,15 +14,20 @@ a {
     transform: translate(-50%, -50%);
 }
 
-.custom-card-login {
-    background-color: #F2FFFB;
-    padding: 20px;
-}
-
 .header-text {
     font-size: 24px;
     font-family: "LatoBlack" !important;
     font-weight: bold;
+}
+
+.iniCarousel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
