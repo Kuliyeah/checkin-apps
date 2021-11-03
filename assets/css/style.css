@@ -1,9 +1,150 @@
 body {
-    font-family: "LatoRegular";
+    font-family: "LatoRegular" !important;
 }
 
 a {
     text-decoration: none;
+}
+
+.about {
+    padding-top: 175px;
+}
+
+.bg-1 {
+    position: absolute;
+    top: 350px;
+}
+
+.bg-2 {
+    position: absolute;
+    top: 2650px;
+    left: 20vw;
+}
+
+.bg-3 {
+    position: absolute;
+    top: 3100px;
+    left: 50vw;
+}
+
+.fg-1 {
+    position: absolute;
+    width: 99vw;
+    bottom: 0vh;
+}
+
+.index-1 {
+    z-index: 20 !important;
+}
+
+.rounded2 {
+    border-radius: 30px;
+}
+
+.hr_custom {
+    margin-top: -30px;
+    width: 15vh;
+    border-bottom: 3px solid #64CF83 !important;
+}
+
+.mt-plus {
+    margin-top: 150px !important;
+}
+
+.col-md-3-custom {
+    flex: 0 0 auto;
+    width: 29%;
+}
+
+.mt-minus {
+    margin-top: -150px;
+}
+
+.custom_virus {
+    list-style-image: url('../image/virus.png');
+}
+
+.nav_active {
+    color: #44B564 !important;
+    border-bottom: 1px solid #44B564 !important;
+}
+
+.nav_button {
+    min-width: 130px;
+}
+
+#carousel {
+    position: relative;
+    height: 600px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+#carousel div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1;
+}
+
+#carousel div img {
+    width: 250px;
+    transition: width 1s;
+}
+
+#carousel div.prev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.prev img {
+    width: 200px;
+}
+
+#carousel div.prevLeftSecond {
+    z-index: 4;
+    left: 15%;
+    transform: translateY(35%) translateX(-50%);
+    opacity: .7;
+}
+
+#carousel div.prevLeftSecond img {
+    width: 150px;
+}
+
+#carousel div.selected {
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+}
+
+#carousel div.next {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.next img {
+    width: 200px;
+}
+
+#carousel div.nextRightSecond {
+    z-index: 4;
+    left: 85%;
+    transform: translateY(35%) translateX(-50%);
+    opacity: .7;
+}
+
+#carousel div.nextRightSecond img {
+    width: 150px;
+}
+
+.buttons {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
 }
 
 .pos-center {
@@ -18,16 +159,6 @@ a {
     font-size: 24px;
     font-family: "LatoBlack" !important;
     font-weight: bold;
-}
-
-.iniCarousel {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
