@@ -209,3 +209,67 @@ textarea {
     bottom: 16px;
     left: 115px;
 }
+
+.nav-bar{
+    width: 75px;
+    height: 580px;
+    background-color: #E0FFF6;
+    border-radius: 30px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.menu-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 12px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.profile{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img{
+    width: 60px;
+}
+
+.menu{
+    margin-top: 34px;
+}
+
+.menu ul li{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 6px;
+    list-style: none;
+}
+.menu ul li a{
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.menu ul li a i:hover{
+    background-color: #5DD482;
+    border: 0;
+}
+
+.button-menu{
+    margin-top: 100px;
+}
+
+
