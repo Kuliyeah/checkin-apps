@@ -211,9 +211,9 @@ textarea {
     left: 115px;
 }
 
-.nav-bar{
+.nav-bar {
     width: 75px;
-    height: 580px;
+    max-height: 90vh;
     background-color: #E0FFF6;
     border-radius: 30px;
     position: absolute;
@@ -221,41 +221,42 @@ textarea {
     left: 5%;
 }
 
-.menu-bar{
+.menu-bar {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 12px;
 }
 
-.menu{
+.menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.profile{
+.profile {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.profile img{
+.profile img {
     width: 60px;
 }
 
-.menu{
+.menu {
     margin-top: 34px;
 }
 
-.menu ul li{
+.menu ul li {
     font-size: 24px;
     text-align: center;
     margin-top: 6px;
     list-style: none;
 }
-.menu ul li a{
+
+.menu ul li a {
     padding: 6px;
     border-radius: 10px;
     border: 1px solid black;
@@ -264,13 +265,17 @@ textarea {
     color: black;
 }
 
-.menu ul li a i:hover{
+.menu ul li a i:hover {
     background-color: #5DD482;
     border: 0;
 }
 
-.button-menu{
-    margin-top: 100px;
+.menu ul li a.actived {
+    background-color: #5DD482;
+    border: 0;
 }
 
-
+.button-menu ul li a.out {
+    background-color: #F28F8F;
+    border: 0;
+}
