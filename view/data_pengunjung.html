@@ -76,13 +76,13 @@
                                 <tbody>
                                     <tr id="hapusini">
                                         <td>1</td>
-                                        <td>P-0001</td>
-                                        <td>Mark Jacob</td>
-                                        <td>Bandung Barat, Jl. Pasundan no 5</td>
-                                        <td>082123304428</td>
-                                        <td>27</td>
-                                        <td>Pria</td>
-                                        <td>true</td>
+                                        <td id="id1"></td>
+                                        <td id="nama1"></td>
+                                        <td id="alamat1"></td>
+                                        <td id="nohp1"></td>
+                                        <td id="umur1"></td>
+                                        <td id="jk1"></td>
+                                        <td id="status1"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -90,13 +90,13 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>P-0002</td>
-                                        <td>Otto Thornton</td>
-                                        <td>Lombok Tengah, Jl. Ngaben no 1</td>
-                                        <td>0847469632586</td>
-                                        <td>22</td>
-                                        <td>Pria</td>
-                                        <td>true</td>
+                                        <td id="id2"></td>
+                                        <td id="nama2"></td>
+                                        <td id="alamat2"></td>
+                                        <td id="nohp2"></td>
+                                        <td id="umur2"></td>
+                                        <td id="jk2"></td>
+                                        <td id="status2"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -104,13 +104,13 @@
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>P-0003</td>
-                                        <td>Rina Gifari</td>
-                                        <td>Palembang, Jl. Beton no 11</td>
-                                        <td>0846294514396</td>
-                                        <td>20</td>
-                                        <td>Wanita</td>
-                                        <td>true</td>
+                                        <td id="id3"></td>
+                                        <td id="nama3"></td>
+                                        <td id="alamat3"></td>
+                                        <td id="nohp3"></td>
+                                        <td id="umur3"></td>
+                                        <td id="jk3"></td>
+                                        <td id="status3"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -150,6 +150,33 @@
                 $("#id1").text("1");
                 $("#id2").text("2");
             }
+        });
+
+        $.getJSON('../assets/json/data_pengunjung.json', function(data) {
+        console.log(data);
+            $('#id1').html(data[0].idPengunjung);
+            $('#nama1').html(data[0].nama);
+            $('#alamat1').html(data[0].alamat);
+            $('#nohp1').html(data[0].noHP);
+            $('#umur1').html(data[0].umur);
+            $('#jk1').html(data[0].jenisKelamin);
+            $('#status1').html(data[0].statusKesehatan);
+
+            $('#id2').html(data[1].idPengunjung);
+            $('#nama2').html(data[1].nama);
+            $('#alamat2').html(data[1].alamat);
+            $('#nohp2').html(data[1].noHP);
+            $('#umur2').html(data[1].umur);
+            $('#jk2').html(data[1].jenisKelamin);
+            $('#status2').html(data[1].statusKesehatan);
+
+            $('#id3').html(data[2].idPengunjung);
+            $('#nama3').html(data[2].nama);
+            $('#alamat3').html(data[2].alamat);
+            $('#nohp3').html(data[2].noHP);
+            $('#umur3').html(data[2].umur);
+            $('#jk3').html(data[2].jenisKelamin);
+            $('#status3').html(data[2].statusKesehatan);
         });
     });
 </script>

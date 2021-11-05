@@ -78,12 +78,12 @@
                                 <tbody>
                                     <tr id="hapusini">
                                         <td>1</td>
-                                        <td>M-0001</td>
-                                        <td>Abata Mall</td>
-                                        <td>Bandung, Jl. Kenangan no 2</td>
-                                        <td>085787634356</td>
-                                        <td>Mall</td>
-                                        <td>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</td>
+                                        <td id="id1"></td>
+                                        <td id="nama1"></td>
+                                        <td id="alamat1"></td>
+                                        <td id="nohp1"></td>
+                                        <td id="bidang1"></td>
+                                        <td id="desk1"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -91,12 +91,12 @@
                                     </tr>
                                     <tr id="hapusini">
                                         <td>2</td>
-                                        <td>M-0002</td>
-                                        <td>Nga-Ben Caffee</td>
-                                        <td>Lampung, Jl. Lurus no 12</td>
-                                        <td>085787634356</td>
-                                        <td>Caffe</td>
-                                        <td>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</td>
+                                        <td id="id2"></td>
+                                        <td id="nama2"></td>
+                                        <td id="alamat2"></td>
+                                        <td id="nohp2"></td>
+                                        <td id="bidang2"></td>
+                                        <td id="desk2"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -104,12 +104,12 @@
                                     </tr>
                                     <tr id="hapusini">
                                         <td>3</td>
-                                        <td>M-0003</td>
-                                        <td>Roro Caffee</td>
-                                        <td>Sukabumi, Jl. Kidul no 1</td>
-                                        <td>085787634356</td>
-                                        <td>Caffe and Resto</td>
-                                        <td>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</td>
+                                        <td id="id3"></td>
+                                        <td id="nama3"></td>
+                                        <td id="alamat3"></td>
+                                        <td id="nohp3"></td>
+                                        <td id="bidang3"></td>
+                                        <td id="desk3"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -149,6 +149,30 @@
                 $("#id1").text("1");
                 $("#id2").text("2");
             }
+        });
+        $.getJSON('../assets/json/data_mitra.json', function(data) {
+        console.log(data);
+            $('#id1').html(data[0].idMitra);
+            $('#nama1').html(data[0].nama);
+            $('#alamat1').html(data[0].alamat);
+            $('#nohp1').html(data[0].noHP);
+            $('#bidang1').html(data[0].bidangUsaha);
+            $('#desk1').html(data[0].deskripsi);
+
+            $('#id2').html(data[1].idMitra);
+            $('#nama2').html(data[1].nama);
+            $('#alamat2').html(data[1].alamat);
+            $('#nohp2').html(data[1].noHP);
+            $('#bidang2').html(data[1].bidangUsaha);
+            $('#desk2').html(data[1].deskripsi);
+
+            $('#id3').html(data[2].idMitra);
+            $('#nama3').html(data[2].nama);
+            $('#alamat3').html(data[2].alamat);
+            $('#nohp3').html(data[2].noHP);
+            $('#bidang3').html(data[2].bidangUsaha);
+            $('#desk3').html(data[2].deskripsi);
+            
         });
     });
 </script>

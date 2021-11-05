@@ -65,19 +65,19 @@
                                         <th scope="col">ID Kunjungan</th>
                                         <th scope="col">ID Pengunjung</th>
                                         <th scope="col">ID Mitra</th>
-                                        <th scope="col">Check In</th>
-                                        <th scope="col">Check Out</th>
+                                        <th scope="col" width="175px">Check In</th>
+                                        <th scope="col" width="175px">Check Out</th>
                                         <th scope="col" width="125px">Opsi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr id="hapusini">
                                         <td>1</td>
-                                        <td>K-0001</td>
-                                        <td>P-0003</td>
-                                        <td>M-0001</td>
-                                        <td>05 Oktober 2021   09:08:16</td>
-                                        <td>05 Oktober 2021   10:22:38</td>
+                                        <td id="idK1"></td>
+                                        <td id="idP1"></td>
+                                        <td id="idM1"></td>
+                                        <td id="in1"></td>
+                                        <td id="out1"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -85,11 +85,11 @@
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>K-0002</td>
-                                        <td>P-0002</td>
-                                        <td>M-0003</td>
-                                        <td>05 Oktober 2021   09:10:45</td>
-                                        <td>05 Oktober 2021   11:29:08</td>
+                                        <td id="idK2"></td>
+                                        <td id="idP2"></td>
+                                        <td id="idM2"></td>
+                                        <td id="in2"></td>
+                                        <td id="out2"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -97,11 +97,11 @@
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td>K-0003</td>
-                                        <td>P-0001</td>
-                                        <td>M-0002</td>
-                                        <td>06 Oktober 2021   16:30:06</td>
-                                        <td>06 Oktober 2021   17:32:17</td>
+                                        <td id="idK3"></td>
+                                        <td id="idP3"></td>
+                                        <td id="idM3"></td>
+                                        <td id="in3"></td>
+                                        <td id="out3"></td>
                                         <td>
                                             <a href="#" class="btn-sm btn-warning" id="update">Update</a>
                                             <a href="#" class="btn-sm btn-danger" id="delete">Delete</a>
@@ -141,6 +141,27 @@
                 $("#id1").text("1");
                 $("#id2").text("2");
             }
+        });
+        
+        $.getJSON('../assets/json/data_kunjungan.json', function(data) {
+        console.log(data);
+            $('#idK1').html(data[0].idKunjungan);
+            $('#idP1').html(data[0].idPengunjung);
+            $('#idM1').html(data[0].idMitra);
+            $('#in1').html(data[0].waktuCheckin);
+            $('#out1').html(data[0].waktuCheckout);
+
+            $('#idK2').html(data[1].idKunjungan);
+            $('#idP2').html(data[1].idPengunjung);
+            $('#idM2').html(data[1].idMitra);
+            $('#in2').html(data[1].waktuCheckin);
+            $('#out2').html(data[1].waktuCheckout);
+
+            $('#idK3').html(data[2].idKunjungan);
+            $('#idP3').html(data[2].idPengunjung);
+            $('#idM3').html(data[2].idMitra);
+            $('#in3').html(data[2].waktuCheckin);
+            $('#out3').html(data[2].waktuCheckout);
         });
     });
 </script>
