@@ -1,0 +1,23 @@
+[
+	{
+		idKunjungan: "K-0001",
+        idPengunjung: "P-0003",
+        idMitra: "M-0001",
+        waktuCheckin: "2021-10-5 9:8:16",
+        waktuCheckout: "2021-10-5 10:22:38"
+    },
+    {
+		idKunjungan: "K-0002",
+        idPengunjung: "P-0002",
+        idMitra: "M-0003",
+        waktuCheckin: "2021-10-5 9:10:45",
+        waktuCheckout: "2021-10-5 11:29:8"
+    },
+    {
+		idKunjungan: "K-0003",
+        idPengunjung: "P-0001",
+        idMitra: "M-0002",
+        waktuCheckin: "2021-10-6 16:30:6",
+        waktuCheckout: "2021-10-6 17:32:17"
+    }
+]

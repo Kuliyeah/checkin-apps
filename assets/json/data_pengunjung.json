@@ -1,0 +1,29 @@
+[
+	{
+		idPengunjung: "P-0001",
+        nama: "Mark Jacob",
+        alamat: "Bandung Barat, Jl. Pasundan no 5",
+        noHP: "082123304428",
+        umur: "27",
+        jenisKelamin: "Pria",
+        statusKesehatan: true
+    },
+    {
+		idPengunjung: "P-0002",
+        nama: "Otto Thornton",
+        alamat: "Lombok Tengah, Jl. Ngaben no 1",
+        noHP: "0847469632586",
+        umur: "22",
+        jenisKelamin: "Pria",
+        statusKesehatan: true
+    },
+    {
+		idPengunjung: "P-0003",
+        nama: "Rina Gifari",
+        alamat: "Palembang, Jl. Beton no 11",
+        noHP: "0846294514396",
+        umur: "20",
+        jenisKelamin: "Wanita",
+        statusKesehatan: true
+    },
+]
