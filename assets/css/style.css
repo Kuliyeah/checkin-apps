@@ -259,23 +259,19 @@ textarea {
 .menu ul li a {
     padding: 6px;
     border-radius: 10px;
-    border: 1px solid black;
     text-align: center;
     align-items: center;
     color: black;
 }
 
-.menu ul li a i:hover {
+.menu ul li a:hover {
     background-color: #5DD482;
-    border: 0;
 }
 
 .menu ul li a.actived {
     background-color: #5DD482;
-    border: 0;
 }
 
 .button-menu ul li a.out {
     background-color: #F28F8F;
-    border: 0;
 }
