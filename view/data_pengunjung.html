@@ -25,36 +25,55 @@
                 <div class="main-menu">
                     <ul>
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-                            <a href="dashboard.html"><i class="bi bi-house-door-fill"></i></a></i>
+                            <a href="dashboard.html">
+                                <i class="bi bi-house-door-fill"></i>
+                                <div class="position-absolute tooltips">Beranda</div>
+                            </a>
                         </li>
                         <li>
-                            <a href="data_mitra.html"><i class="bi bi-stack"></i></a>
+                            <a href="data_mitra.html">
+                                <i class="bi bi-stack"></i>
+                                <div class="position-absolute tooltips">Data Mitra</div>
+                            </a>
                         </li>
                         <li>
-                            <a href="data_pengunjung.html" class="actived"><i class="bi bi-file-earmark-text-fill"></i></a></i>
+                            <a href="data_pengunjung.html" class="actived">
+                                <i class="bi bi-file-earmark-text-fill"></i>
+                                <div class="position-absolute tooltips">Data Pengunjung</div>
+                            </a>
                         </li>
                         <li>
-                            <a href="data_kunjungan.html"><i class="bi bi-graph-up-arrow"></i></a></i>
+                            <a href="data_kunjungan.html">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <div class="position-absolute tooltips">Data Kunjungan</div>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><i class="bi bi-info-circle-fill"></i></a>
+                            <a href="informasi.html">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <div class="position-absolute tooltips">Informasi</div>
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div class="button-menu">
                     <ul>
-                        <li id="keluar" class=""><a href="#" class="out"><i class="bi bi-box-arrow-right"></i></a></li>
+                        <li id="keluar" class="">
+                            <a href="#" class="out bg-danger text-white">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <div class="position-absolute tooltips bg-danger text-white">Beranda</div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="d-flex" style="background-color: #FFF !important;">
-        
-        <div class="pt-5 container col-md-9" style="background-color: #FFFFFF;">
+
+    <div class="d-flex mt-5">
+        <div class="p-5 col-md-10 shadow mb-5 ml-container" style="border-radius: 30px;">
             <div class="row">
                 <div class="col-lg-12">
-
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Data Pengunjung
@@ -155,7 +174,7 @@
         });
 
         $.getJSON('../assets/json/data_pengunjung.json', function(data) {
-        console.log(data);
+            console.log(data);
             $('#id1').html(data[0].idPengunjung);
             $('#nama1').html(data[0].nama);
             $('#alamat1').html(data[0].alamat);

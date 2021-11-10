@@ -174,13 +174,6 @@ textarea {
 
 /* Dashboard */
 
-.side-bar {
-    width: 305px;
-    background-color: #F2FFFB;
-    height: 100vh;
-    border-right: 1px solid rgb(219, 219, 219);
-}
-
 .profil-photo {
     width: 100px;
     border-radius: 100%;
@@ -194,7 +187,7 @@ textarea {
     display: block;
     margin-left: -30px;
     color: black;
-    border-bottom: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .menu ul li a:hover {
@@ -213,12 +206,27 @@ textarea {
 
 .nav-bar {
     width: 75px;
-    max-height: 90vh;
+    height: 88vh;
     background-color: #E0FFF6;
     border-radius: 30px;
     position: absolute;
     top: 5%;
-    left: 5%;
+    left: 3%;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.tooltips {
+    font-size: 15px;
+    margin-top: -2.5rem;
+    left: 4.7vw;
+    min-width: 18.5vh;
+    background-color: #5DD482;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.4);
+    display: none;
+    cursor: auto;
+    z-index: 30;
 }
 
 .menu-bar {
@@ -258,6 +266,7 @@ textarea {
 
 .menu ul li a {
     padding: 6px;
+    margin-top: 10px;
     border-radius: 10px;
     text-align: center;
     align-items: center;
@@ -266,12 +275,87 @@ textarea {
 
 .menu ul li a:hover {
     background-color: #5DD482;
+    border-bottom: 1px solid #5DD482;
+}
+
+.menu ul li a:hover div.tooltips {
+    display: block;
 }
 
 .menu ul li a.actived {
     background-color: #5DD482;
+    border-bottom: 0px solid rgb(0, 0, 0);
+}
+
+.button-menu {
+    margin-top: 35.5vh;
+}
+
+.out {
+    border-radius: 100px !important;
+    border-bottom: 0px solid rgb(0, 0, 0) !important;
 }
 
 .button-menu ul li a.out {
     background-color: #F28F8F;
+}
+
+.ml-container {
+    margin-left: 10vw;
+}
+
+.card-profile {
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-profile .card-photo {
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-profile .card-photo::after {
+    display: none;
+    position: absolute;
+    width: 150%;
+    height: 80px;
+    bottom: 10px;
+    left: -25%;
+    content: "";
+    background-color: #ffffff;
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+}
+
+.card-profile .card-info-profile {
+    display: none;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    margin-top: -107px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    background-color: #ffffff;
+}
+
+.card-profile .card-info-profile h5 {
+    margin-bottom: 0;
+}
+
+.card-profile .card-info-profile p {
+    margin-bottom: 0;
+}
+
+.card-profile:hover .card-info-profile {
+    display: block;
+}
+
+.card-profile:hover .card-photo::after {
+    display: block;
 }
