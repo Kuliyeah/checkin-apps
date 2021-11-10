@@ -32,6 +32,12 @@ textarea {
     left: 50vw;
 }
 
+.bg-4 {
+    position: absolute;
+    top: 350px;
+    right: 0vw;
+}
+
 .fg-1 {
     position: absolute;
     width: 99vw;
