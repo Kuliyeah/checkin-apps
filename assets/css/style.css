@@ -224,10 +224,10 @@ textarea {
 .tooltips {
     font-size: 15px;
     margin-top: -2.5rem;
-    left: 4.7vw;
+    left: 90px;
     min-width: 18.5vh;
     background-color: #5DD482;
-    padding: 0.7rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.4);
     display: none;
