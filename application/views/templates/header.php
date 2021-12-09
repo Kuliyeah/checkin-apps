@@ -31,7 +31,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="data_mitra.html">
+                            <a href="<?= base_url(); ?>mitra">
                                 <i class="bi bi-stack"></i>
                                 <div class="position-absolute tooltips">Data Mitra</div>
                             </a>

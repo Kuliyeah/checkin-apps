@@ -20,5 +20,8 @@ class Mitra extends CI_Controller
 		$data['judul'] = 'Data Mitra';
 		$data['mitra'] = $this->Mitra_model->getDataMitra();
 
-		$this->load->view('mitra/index', $data);
+		$this->load->view('templates/header', $data);
+        $this->load->view('mitra/index', $data);
+        $this->load->view('templates/footer', $data);
 	}
+}
