@@ -44,7 +44,7 @@
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="./view/dashboard.html">
+                <form action="home/login" method="POST">
                     <div class="modal-header">
                         <h5 class="modal-title" id="loginModalLabel">Login</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -52,11 +52,11 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label">Username</label>
-                            <input type="text" class="form-control" id="email" placeholder="example" required>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="example" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="********" required>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="********" required>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -256,7 +256,7 @@
     </footer>
 </body>
 
-<script type="text/javascript " src="./../node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript " src="./node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript " src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript " src="./node_modules/wow.js/dist/wow.js"></script>
 <!-- <script type="text/javascript " src="./assets/js/navbar.js"></script> -->
