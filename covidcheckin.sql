@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Okt 2021 pada 17.33
--- Versi server: 10.4.19-MariaDB
--- Versi PHP: 8.0.7
+-- Generation Time: Dec 09, 2021 at 03:11 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,20 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
   `idAdmin` int(10) NOT NULL,
   `namaAdmin` varchar(50) NOT NULL,
   `usernameAdmin` varchar(20) NOT NULL,
-  `passwordAdmin` varchar(20) NOT NULL
+  `passwordAdmin` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`idAdmin`, `namaAdmin`, `usernameAdmin`, `passwordAdmin`) VALUES
+(1, 'Lovanto', 'admin', '$2y$10$hRi1qju2KOeEPcBZ0wYfhu/PN5e9Wl.ddWeDTds8Uokad764X9D1a');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kunjungan`
+-- Table structure for table `kunjungan`
 --
 
 CREATE TABLE `kunjungan` (
@@ -50,7 +57,7 @@ CREATE TABLE `kunjungan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mitra`
+-- Table structure for table `mitra`
 --
 
 CREATE TABLE `mitra` (
@@ -63,7 +70,7 @@ CREATE TABLE `mitra` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengunjung`
+-- Table structure for table `pengunjung`
 --
 
 CREATE TABLE `pengunjung` (
@@ -81,13 +88,13 @@ CREATE TABLE `pengunjung` (
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`idAdmin`);
 
 --
--- Indeks untuk tabel `kunjungan`
+-- Indexes for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD PRIMARY KEY (`idKunjungan`),
@@ -95,51 +102,51 @@ ALTER TABLE `kunjungan`
   ADD KEY `fk_idMitra` (`idMitra`);
 
 --
--- Indeks untuk tabel `mitra`
+-- Indexes for table `mitra`
 --
 ALTER TABLE `mitra`
   ADD PRIMARY KEY (`idMitra`);
 
 --
--- Indeks untuk tabel `pengunjung`
+-- Indexes for table `pengunjung`
 --
 ALTER TABLE `pengunjung`
   ADD PRIMARY KEY (`idPengunjung`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `idAdmin` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAdmin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `kunjungan`
+-- AUTO_INCREMENT for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   MODIFY `idKunjungan` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `mitra`
+-- AUTO_INCREMENT for table `mitra`
 --
 ALTER TABLE `mitra`
   MODIFY `idMitra` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `pengunjung`
+-- AUTO_INCREMENT for table `pengunjung`
 --
 ALTER TABLE `pengunjung`
   MODIFY `idPengunjung` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `kunjungan`
+-- Constraints for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD CONSTRAINT `fk_idMitra` FOREIGN KEY (`idMitra`) REFERENCES `mitra` (`idMitra`),
