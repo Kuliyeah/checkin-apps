@@ -16,7 +16,11 @@ class Pengunjung extends CI_Controller
 
 	public function index()
 	{
+		$data['judul'] = 'Data Mitra';
 		$data['pengunjung'] = $this->Pengunjung_model->getDataPengunjung();
 
-		$this->load->view('pengunjung/index', $data);
+		$this->load->view('templates/header', $data);
+        $this->load->view('pengunjung/index', $data);
+        $this->load->view('templates/footer');
 	}
+}

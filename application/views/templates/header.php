@@ -25,7 +25,7 @@
                 <div class="main-menu">
                     <ul>
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-                            <a href="dashboard.html" class="actived">
+                            <a href="<?= base_url(); ?>home" class="actived">
                                 <i class="bi bi-house-door-fill"></i>
                                 <div class="position-absolute tooltips">Beranda</div>
                             </a>
@@ -37,19 +37,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="data_pengunjung.html">
+                            <a href="<?= base_url(); ?>pengunjung">
                                 <i class="bi bi-file-earmark-text-fill"></i>
                                 <div class="position-absolute tooltips">Data Pengunjung</div>
                             </a>
                         </li>
                         <li>
-                            <a href="data_kunjungan.html">
+                            <a href="<?= base_url(); ?>kunjungan">
                                 <i class="bi bi-graph-up-arrow"></i>
                                 <div class="position-absolute tooltips">Data Kunjungan</div>
                             </a>
                         </li>
                         <li>
-                            <a href="informasi.html">
+                            <a href="<?= base_url(); ?>informasi">
                                 <i class="bi bi-info-circle-fill"></i>
                                 <div class="position-absolute tooltips">Informasi</div>
                             </a>

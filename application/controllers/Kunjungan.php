@@ -16,7 +16,11 @@ class Kunjungan extends CI_Controller
 
 	public function index()
 	{
+		$data['judul'] = 'Data Mitra';
 		$data['kunjungan'] = $this->Kunjungan_model->getDataKunjungan();
 
-		$this->load->view('kunjungan/index', $data);
+		$this->load->view('templates/header', $data);
+        $this->load->view('kunjungan/index', $data);
+        $this->load->view('templates/footer');
 	}
+}
