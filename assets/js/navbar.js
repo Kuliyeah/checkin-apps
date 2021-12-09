@@ -1,10 +1,6 @@
 $(document).ready(function() {
     $("#nav_tentang").addClass("nav_active");
     let mainNavLinks = document.querySelectorAll("nav div div ul li a");
-    let mainSections = document.querySelectorAll("main section");
-
-    let lastId;
-    let cur = [];
 
     window.addEventListener("scroll", event => {
         let fromTop = window.scrollY;
