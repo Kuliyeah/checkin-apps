@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2021 at 03:11 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Waktu pembuatan: 13 Des 2021 pada 14.58
+-- Versi server: 10.4.19-MariaDB
+-- Versi PHP: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`idAdmin`, `namaAdmin`, `usernameAdmin`, `passwordAdmin`) VALUES
@@ -44,20 +44,32 @@ INSERT INTO `admin` (`idAdmin`, `namaAdmin`, `usernameAdmin`, `passwordAdmin`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kunjungan`
+-- Struktur dari tabel `kunjungan`
 --
 
 CREATE TABLE `kunjungan` (
-  `idKunjungan` int(10) NOT NULL,
+  `idKunjungan` int(100) NOT NULL,
   `idPengunjung` int(10) NOT NULL,
   `idMitra` int(10) NOT NULL,
-  `statusKunjungan` varchar(20) NOT NULL
+  `statusKunjungan` enum('Selesai','Dalam Kunjungan') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kunjungan`
+--
+
+INSERT INTO `kunjungan` (`idKunjungan`, `idPengunjung`, `idMitra`, `statusKunjungan`) VALUES
+(1, 6, 3, 'Selesai'),
+(2, 1, 1, 'Dalam Kunjungan'),
+(3, 4, 3, 'Selesai'),
+(4, 2, 4, 'Selesai'),
+(5, 3, 4, 'Dalam Kunjungan'),
+(6, 5, 5, 'Dalam Kunjungan');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mitra`
+-- Struktur dari tabel `mitra`
 --
 
 CREATE TABLE `mitra` (
@@ -67,10 +79,21 @@ CREATE TABLE `mitra` (
   `noHpMitra` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `mitra`
+--
+
+INSERT INTO `mitra` (`idMitra`, `namaMitra`, `alamatMitra`, `noHpMitra`) VALUES
+(1, 'Lasco Kaffe', 'Jl. Buah Batu No.54, Burangrang, Kec. Lengkong, Kota Bandung, Jawa Barat 40262', '0821000000'),
+(2, 'Hoods Coffee', 'Jl. Kw. Industri Tunas Ruko No.1, Belian, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29444', '082111190909'),
+(3, 'Lotte Mart', 'Jl. Trans Sumatera, Lampung', '08219999990'),
+(4, 'Transmart Bubat', 'Terusan Buah Batu, Bandung', '08222909900'),
+(5, 'Telyu Coffee', 'Lingkungan Telkom University, Bandung, Indonesia', '088131434225');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengunjung`
+-- Struktur dari tabel `pengunjung`
 --
 
 CREATE TABLE `pengunjung` (
@@ -79,22 +102,34 @@ CREATE TABLE `pengunjung` (
   `alamatPengunjung` varchar(100) NOT NULL,
   `noHpPengunjung` varchar(12) NOT NULL,
   `umurPengunjung` int(2) NOT NULL,
-  `jenisKelaminPengunjung` varchar(10) NOT NULL,
-  `statusKesehatan` varchar(10) NOT NULL
+  `jenisKelaminPengunjung` enum('Pria','Wanita') NOT NULL,
+  `statusKesehatan` enum('Negatif','Positif','ODP','OTG') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pengunjung`
+--
+
+INSERT INTO `pengunjung` (`idPengunjung`, `namaPengunjung`, `alamatPengunjung`, `noHpPengunjung`, `umurPengunjung`, `jenisKelaminPengunjung`, `statusKesehatan`) VALUES
+(1, 'Tatang Ruhiyan', 'Jl Sekolah Kencana 4 Bl B/604, Dki Jakarta', '08881213131', 18, 'Pria', 'Negatif'),
+(2, 'Bambang Jaelani', 'Jl Raya Bekasi, Dki Jakarta', '08909028323', 23, 'Pria', 'Negatif'),
+(3, 'Ismed Sofian', 'Gg. Pegangsaan timur, Jakarta.', '083134242424', 25, 'Pria', 'ODP'),
+(4, 'Ayu Fadhila', 'Gg. Pegangsaan barat, Jakarta', '082932424233', 22, 'Wanita', 'Negatif'),
+(5, 'Salsabilla Aini', 'Jl. Manasaja, Kec. Apasaja, Jateng', '083134141312', 22, 'Wanita', 'Negatif'),
+(6, 'Aina Salsabilla Muslim', 'Bandar Jaya, Lampung', '081121311342', 21, 'Wanita', 'Negatif');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`idAdmin`);
 
 --
--- Indexes for table `kunjungan`
+-- Indeks untuk tabel `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD PRIMARY KEY (`idKunjungan`),
@@ -102,51 +137,51 @@ ALTER TABLE `kunjungan`
   ADD KEY `fk_idMitra` (`idMitra`);
 
 --
--- Indexes for table `mitra`
+-- Indeks untuk tabel `mitra`
 --
 ALTER TABLE `mitra`
   ADD PRIMARY KEY (`idMitra`);
 
 --
--- Indexes for table `pengunjung`
+-- Indeks untuk tabel `pengunjung`
 --
 ALTER TABLE `pengunjung`
   ADD PRIMARY KEY (`idPengunjung`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `idAdmin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `kunjungan`
+-- AUTO_INCREMENT untuk tabel `kunjungan`
 --
 ALTER TABLE `kunjungan`
-  MODIFY `idKunjungan` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idKunjungan` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `mitra`
+-- AUTO_INCREMENT untuk tabel `mitra`
 --
 ALTER TABLE `mitra`
-  MODIFY `idMitra` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idMitra` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `pengunjung`
+-- AUTO_INCREMENT untuk tabel `pengunjung`
 --
 ALTER TABLE `pengunjung`
-  MODIFY `idPengunjung` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPengunjung` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `kunjungan`
+-- Ketidakleluasaan untuk tabel `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD CONSTRAINT `fk_idMitra` FOREIGN KEY (`idMitra`) REFERENCES `mitra` (`idMitra`),

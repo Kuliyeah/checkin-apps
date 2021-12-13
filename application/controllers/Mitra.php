@@ -15,7 +15,7 @@ class Mitra extends CI_Controller
 
 	public function index()
 	{
-		$data['mitra'] = $this->Mitra_model->getDataMitra();
+		$data['mitra'] = $this->Mitra_model->getDataMitra()->result();
 
 		$this->load->view('templates/header');
         $this->load->view('mitra/index', $data);
