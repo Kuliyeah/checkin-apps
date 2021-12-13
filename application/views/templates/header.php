@@ -25,31 +25,31 @@
                 <div class="main-menu">
                     <ul>
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-                            <a href="<?= base_url(); ?>dashboard" class="actived">
+                            <a href="<?= base_url(); ?>dashboard" class="<?php if (uri_string() === 'dashboard') echo 'actived' ?>">
                                 <i class="bi bi-house-door-fill"></i>
                                 <div class="position-absolute tooltips">Beranda</div>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= base_url(); ?>mitra">
+                            <a href="<?= base_url(); ?>mitra" class="<?php if (uri_string() === 'mitra') echo 'actived' ?>">
                                 <i class="bi bi-stack"></i>
                                 <div class="position-absolute tooltips">Data Mitra</div>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= base_url(); ?>pengunjung">
+                            <a href="<?= base_url(); ?>pengunjung" class="<?php if (uri_string() === 'pengunjung') echo 'actived' ?>">
                                 <i class="bi bi-file-earmark-text-fill"></i>
                                 <div class="position-absolute tooltips">Data Pengunjung</div>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= base_url(); ?>kunjungan">
+                            <a href="<?= base_url(); ?>kunjungan" class="<?php if (uri_string() === 'kunjungan') echo 'actived' ?>">
                                 <i class="bi bi-graph-up-arrow"></i>
                                 <div class="position-absolute tooltips">Data Kunjungan</div>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= base_url(); ?>informasi">
+                            <a href="<?= base_url(); ?>informasi" class="<?php if (uri_string() === 'informasi') echo 'actived' ?>">
                                 <i class="bi bi-info-circle-fill"></i>
                                 <div class="position-absolute tooltips">Informasi</div>
                             </a>
