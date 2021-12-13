@@ -2,7 +2,6 @@
 
 class Mitra extends CI_Controller
 {
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -16,11 +15,9 @@ class Mitra extends CI_Controller
 
 	public function index()
 	{
-
-		$data['judul'] = 'Data Mitra';
 		$data['mitra'] = $this->Mitra_model->getDataMitra();
 
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/header');
         $this->load->view('mitra/index', $data);
         $this->load->view('templates/footer');
 	}
