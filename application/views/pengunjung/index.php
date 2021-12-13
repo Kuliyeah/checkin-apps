@@ -12,7 +12,6 @@
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">ID</th>
                                     <th scope="col">Nama Lengkap</th>
                                     <th scope="col">Alamat</th>
                                     <th scope="col">No HP</th>
@@ -23,77 +22,27 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-                                        <a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-                                        <a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-                                        <a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-                                        <a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>Test</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-                                        <a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+								<?php
+                                    $i = 1;
+                                    foreach ($pengunjung as $data) { ?>
+								<tr>
+									<td><?php echo $i?></td>
+									<td><?php echo $data->namaPengunjung?></td>
+									<td><?php echo $data->alamatPengunjung ?></td>
+									<td><?php echo $data->noHpPengunjung ?></td>
+									<td><?php echo $data->umurPengunjung ?></td>
+									<td><?php echo $data->jenisKelaminPengunjung ?></td>
+									<td><?php echo $data->statusKesehatan ?></td>
+									<td>
+										<a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
+										<a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
+									</td>
+								</tr>
+								<?php
+                                    $i++;    
+                                }
+                                ?>
+							</tbody>
                         </table>
                     </div>
                 </div>
