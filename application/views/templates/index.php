@@ -37,7 +37,7 @@
 
             <div class="mt-5 lato-regular">
                 <div class="col-md-12">
-                    <div class="p-3 bg-body rounded2 p-5" style="border: 1px solid rgb(221, 221, 221);">
+                    <div class="p-3 bg-body rounded2 p-5" style="border: 1px solid rgb(221, 221, 221); background-color: whitesmoke !important;">
                         <div class="row">
                             <div class="col-md-3 text-center">
                                 <h4>Total Kasus</h4>
