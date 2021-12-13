@@ -25,7 +25,7 @@
                 <div class="main-menu">
                     <ul>
                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-                            <a href="<?= base_url(); ?>home" class="actived">
+                            <a href="<?= base_url(); ?>dashboard" class="actived">
                                 <i class="bi bi-house-door-fill"></i>
                                 <div class="position-absolute tooltips">Beranda</div>
                             </a>
