@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Des 2021 pada 14.58
+-- Waktu pembuatan: 13 Des 2021 pada 16.04
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -76,19 +76,21 @@ CREATE TABLE `mitra` (
   `idMitra` int(10) NOT NULL,
   `namaMitra` varchar(50) NOT NULL,
   `alamatMitra` varchar(100) NOT NULL,
-  `noHpMitra` varchar(12) NOT NULL
+  `noHpMitra` varchar(12) NOT NULL,
+  `jenisUsaha` varchar(100) NOT NULL,
+  `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `mitra`
 --
 
-INSERT INTO `mitra` (`idMitra`, `namaMitra`, `alamatMitra`, `noHpMitra`) VALUES
-(1, 'Lasco Kaffe', 'Jl. Buah Batu No.54, Burangrang, Kec. Lengkong, Kota Bandung, Jawa Barat 40262', '0821000000'),
-(2, 'Hoods Coffee', 'Jl. Kw. Industri Tunas Ruko No.1, Belian, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29444', '082111190909'),
-(3, 'Lotte Mart', 'Jl. Trans Sumatera, Lampung', '08219999990'),
-(4, 'Transmart Bubat', 'Terusan Buah Batu, Bandung', '08222909900'),
-(5, 'Telyu Coffee', 'Lingkungan Telkom University, Bandung, Indonesia', '088131434225');
+INSERT INTO `mitra` (`idMitra`, `namaMitra`, `alamatMitra`, `noHpMitra`, `jenisUsaha`, `deskripsi`) VALUES
+(1, 'Lasco Kaffe', 'Jl. Buah Batu No.54, Burangrang, Kec. Lengkong, Kota Bandung, Jawa Barat 40262', '0821000000', 'Kaffe', 'Menjual aneka minuman kopi dengan lingkungan yang nyaman'),
+(2, 'Hoods Coffee', 'Jl. Kw. Industri Tunas Ruko No.1, Belian, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29444', '082111190909', 'Kaffe', 'Menjual aneka minuman dan tempat santai'),
+(3, 'Lotte Mart', 'Jl. Trans Sumatera, Lampung', '08219999990', 'Modern Market', 'Tempat grosir termurah'),
+(4, 'Transmart Bubat', 'Terusan Buah Batu, Bandung', '08222909900', 'Modern market dan tempat hiburan', 'tempat hiburan keluarga dan penjualan'),
+(5, 'Telyu Coffee', 'Lingkungan Telkom University, Bandung, Indonesia', '088131434225', 'Kaffe', 'Menjual aneka minuman mahasiswa');
 
 -- --------------------------------------------------------
 
