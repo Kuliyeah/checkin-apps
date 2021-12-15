@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="assets/image/icon.png" alt="Go Check-In" width="65.22px" height="61.41px"></a>
+                <a class="navbar-brand" href="home"><img src="assets/image/icon.png" alt="Go Check-In" width="65.22px" height="61.41px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,10 +27,13 @@
                 <div class="collapse navbar-collapse" id="navbarRightAlignExample">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#tentang" id="nav_tentang">Tentang Kami</a>
+                            <a class="nav-link lato-bold" aria-current="page" href="#tentang" id="nav_tentang">Tentang Kami</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#kontak" id="nav_kontak">Kontak Kami</a>
+                            <a class="nav-link lato-bold" href="#kontak" id="nav_kontak">Kontak Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link lato-black text-success" href="home/daftar" id="mitra">Become Our Mitra</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-success px-3 nav-link text-white nav_button" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>

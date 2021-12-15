@@ -10,6 +10,10 @@ class Home extends CI_Controller{
 	public function index(){
 		$this->load->view('home/index');
 	}
+
+	public function daftar(){
+		$this->load->view('home/mitra');
+	}
 	
 	public function login(){
 		$username = $this->input->post('username');
