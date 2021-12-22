@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/font.css">
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="<?= base_url() ?>node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= base_url() ?>node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/font.css">
+    <title><?php echo $judul ?></title>
 </head>
 
 <body>
-    <img src="./assets/image/virus2.png" class="bg-1 wow animate__animated animate__fadeIn">
-    <img src="./assets/image/virus4.png" class="bg-4 wow animate__animated animate__fadeIn">
+    <img src="<?= base_url() ?>assets/image/virus2.png" class="bg-1 wow animate__animated animate__fadeIn">
+    <img src="<?= base_url() ?>assets/image/virus4.png" class="bg-4 wow animate__animated animate__fadeIn">
 
     <nav class="nav-bar">
         <div class="menu-bar">
             <div class="profile">
-                <img src="./assets/image/profil.jpg" alt="profile" style="border-radius: 100px;">
+                <img src="<?= base_url() ?>assets/image/profil.jpg" alt="profile" style="border-radius: 100px;">
             </div>
             <div class="menu">
                 <div class="main-menu">

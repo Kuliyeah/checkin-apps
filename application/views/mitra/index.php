@@ -2,8 +2,8 @@
 	<div class="p-5 col-md-10 shadow mb-5 ml-container" style="border-radius: 30px;">
 		<div class="row">
 			<div class="col-lg-12">
-				<a href="<?php echo base_url()."mitra"."/tampilan_input" ?>">
-					<button class="btn btn-primary mt-1 mb-3">Create New Data</button>
+				<a href="<?php echo base_url() . "mitra/formInputMitra" ?>" class="btn btn-primary mb-2">
+					Create New Data
 				</a>
 
 				<div class="panel panel-default">
@@ -26,25 +26,25 @@
 							</thead>
 							<tbody>
 								<?php
-                                    $i = 1;
-                                    foreach ($mitra as $data) { ?>
-								<tr>
-									<td><?php echo $i?></td>
-									<td><?php echo $data->namaMitra?></td>
-									<td><?php echo $data->alamatMitra ?></td>
-									<td><?php echo $data->noHpMitra ?></td>
-									<td><?php echo $data->jenisUsaha ?></td>
-									<td><?php echo $data->deskripsi ?></td>
-									
-									<td>
-										<a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-										<a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
-									</td>
-								</tr>
+								$i = 1;
+								foreach ($mitra as $data) { ?>
+									<tr>
+										<td><?php echo $i ?></td>
+										<td><?php echo $data->namaMitra ?></td>
+										<td><?php echo $data->alamatMitra ?></td>
+										<td><?php echo $data->noHpMitra ?></td>
+										<td><?php echo $data->jenisUsaha ?></td>
+										<td><?php echo $data->deskripsi ?></td>
+
+										<td>
+											<a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
+											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
+										</td>
+									</tr>
 								<?php
-                                    $i++;    
-                                }
-                                ?>
+									$i++;
+								}
+								?>
 							</tbody>
 						</table>
 					</div>

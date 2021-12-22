@@ -16,14 +16,14 @@ class Mitra extends CI_Controller
 	public function index()
 	{
 		$data['mitra'] = $this->Mitra_model->getDataMitra()->result();
-
-		$this->load->view('templates/header');
-        $this->load->view('mitra/index', $data);
-        $this->load->view('templates/footer');
+		$data['judul'] = "Mitra";
+		$this->load->view('templates/header', $data);
+		$this->load->view('mitra/index', $data);
+		$this->load->view('templates/footer');
 	}
 	public function tambahMitra()
 	{
-		
+
 		$data = array(
 			'namaMitra' => $this->input->post('namaMitra'),
 			'alamatMitra' => $this->input->post('alamatMitra'),
@@ -32,16 +32,23 @@ class Mitra extends CI_Controller
 			'deskripsi' => $this->input->post('deskripsi'),
 		);
 		$this->Mitra_model->tambah_mitra($data);
-		redirect(base_url()."mitra");
-
+		redirect(base_url() . "mitra");
 	}
 
-	public function tampilan_input()
+	public function formInputMitra()
 	{
-		$data['judul'] = "inputMitra";
+		$data['judul'] = "Form Input Mitra";
 
-		$this->load->view('templates/header');
-        $this->load->view('mitra/input_mitra', $data);
-        $this->load->view('templates/footer');
+		$this->load->view('templates/header', $data);
+		$this->load->view('mitra/input_mitra');
+		$this->load->view('templates/footer');
+	}
+
+	public function hapusMitra()
+	{
+
+		$idMitra = $this->input->get('idMitra');
+		$this->Mitra_model->hapus_mitra($idMitra);
+		redirect(base_url() . 'mitra/');
 	}
 }
