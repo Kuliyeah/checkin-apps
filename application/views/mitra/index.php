@@ -2,7 +2,7 @@
 	<div class="p-5 col-md-10 shadow mb-5 ml-container" style="border-radius: 30px;">
 		<div class="row">
 			<div class="col-lg-12">
-				<a href="input_mitra.html">
+				<a href="<?php echo base_url()."mitra"."/tampilan_input" ?>">
 					<button class="btn btn-primary mt-1 mb-3">Create New Data</button>
 				</a>
 

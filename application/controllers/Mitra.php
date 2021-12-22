@@ -21,4 +21,27 @@ class Mitra extends CI_Controller
         $this->load->view('mitra/index', $data);
         $this->load->view('templates/footer');
 	}
+	public function tambahMitra()
+	{
+		
+		$data = array(
+			'namaMitra' => $this->input->post('namaMitra'),
+			'alamatMitra' => $this->input->post('alamatMitra'),
+			'noHpMitra' => $this->input->post('noHpMitra'),
+			'jenisUsaha' => $this->input->post('jenisUsaha'),
+			'deskripsi' => $this->input->post('deskripsi'),
+		);
+		$this->Mitra_model->tambah_mitra($data);
+		redirect(base_url()."mitra");
+
+	}
+
+	public function tampilan_input()
+	{
+		$data['judul'] = "inputMitra";
+
+		$this->load->view('templates/header');
+        $this->load->view('mitra/input_mitra', $data);
+        $this->load->view('templates/footer');
+	}
 }
