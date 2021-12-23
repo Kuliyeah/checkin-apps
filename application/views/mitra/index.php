@@ -1,4 +1,4 @@
-<div class="d-flex mt-5" style="background-color: #FFF !important;">
+<div class="d-flex mt-5" style="background-color: #FFF !important; z-index: 5;">
 	<div class="p-5 col-md-10 shadow mb-5 ml-container" style="border-radius: 30px;">
 		<div class="row">
 			<div class="col-lg-12">
