@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <img src="<?= base_url() ?>assets/image/virus2.png" class="bg-1 wow animate__animated animate__fadeIn">
-    <img src="<?= base_url() ?>assets/image/virus4.png" class="bg-4 wow animate__animated animate__fadeIn">
+    <!-- <img src="<?= base_url() ?>assets/image/virus2.png" class="bg-1 wow animate__animated animate__fadeIn">
+    <img src="<?= base_url() ?>assets/image/virus4.png" class="bg-4 wow animate__animated animate__fadeIn"> -->
 
     <nav class="nav-bar">
         <div class="menu-bar">

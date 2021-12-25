@@ -8,8 +8,9 @@
                     <img class="card-img-top" src="<?= base_url() ?>assets/image/profilePengunjung.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><?= $detailPengunjung->namaPengunjung ?></h5>
+
                         <p class="card-text">
-                            <?= $detailPengunjung->alamatPengunjung ?>
+                            Alamat : <br><?= $detailPengunjung->alamatPengunjung ?>
                         </p>
                     </div>
                     <ul class="list-group list-group-flush">
