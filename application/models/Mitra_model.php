@@ -17,4 +17,9 @@ class Mitra_model extends CI_Model
 		$this->db->where('idMitra', $idMitra);
 		$this->db->delete('mitra');
 	}
+
+	public function countRowsMitra()
+	{
+		return $this->db->get('mitra')->num_rows();
+	}
 }

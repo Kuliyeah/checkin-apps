@@ -8,7 +8,7 @@
                     <div class="card" style="background-color:#5DD482; border:none; border-radius: 10px;">
                         <div class="card-body m-3">
                             <h4>Data Pengunjung</h4>
-                            <p style="text-align: center; font-size: 76px;"><b>109</b></p>
+                            <p style="text-align: center; font-size: 76px;"><b><?php echo $jumlahPengunjung ?></b></p>
                             <h4 style="text-align: right;"> orang </h4>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                     <div class="card" style="background-color:#5DD482; border:none; border-radius: 10px;">
                         <div class="card-body m-3">
                             <h4>Jumlah Mitra</h4>
-                            <p style="text-align: center; font-size: 76px;"><b>90</b> </p>
+                            <p style="text-align: center; font-size: 76px;"><b><?php echo $jumlahMitra ?></b> </p>
                             <h4 style="text-align: right;"> Toko </h4>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                     <div class="card" style="background-color:#5DD482; border:none; border-radius: 10px;">
                         <div class="card-body m-3">
                             <h4>Jumlah Kunjungan</h4>
-                            <p style="text-align: center; font-size: 76px;"><b>1090</b> </p>
+                            <p style="text-align: center; font-size: 76px;"><b><?php echo $jumlahKunjungan ?></b> </p>
                             <h4 style="text-align: right;"> Kunjungan </h4>
                         </div>
                     </div>

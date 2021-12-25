@@ -13,14 +13,31 @@ class Pengunjung extends CI_Controller
 		$this->load->library('form_validation');
 	}
 
-
 	public function index()
 	{
-		$data['judul'] = 'Data Mitra';
+		$data['judul'] = 'Data Pengunjung';
 		$data['pengunjung'] = $this->Pengunjung_model->getDataPengunjung()->result();
 
 		$this->load->view('templates/header', $data);
-        $this->load->view('pengunjung/index', $data);
-        $this->load->view('templates/footer');
+		$this->load->view('pengunjung/index', $data);
+		$this->load->view('templates/footer');
+	}
+
+	// public function hapusPengunjung()
+	// {
+
+	// 	$idPengunjung = $this->input->get('idPengunjung');
+	// 	$this->Pengunjung_model->hapus_pengunjung($idPengunjung);
+	// 	redirect(base_url() . 'pengunjung/');
+	// }
+
+	public function detailPengunjung()
+	{
+		$idPengunjung = $this->input->get('idPengunjung');
+		$data['detailPengunjung'] = $this->Pengunjung_model->getDataPengunjungById($idPengunjung)->row();
+		$data['judul'] = 'Detail Pengunjung';
+		$this->load->view('templates/header', $data);
+		$this->load->view('pengunjung/detailPengunjung', $data);
+		$this->load->view('templates/footer');
 	}
 }
