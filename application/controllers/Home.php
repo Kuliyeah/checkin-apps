@@ -5,6 +5,9 @@ class Home extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('Admin_model');
+		
+		//load session
+		$this->load->library('session');
     }
 
 	public function index(){
@@ -19,6 +22,7 @@ class Home extends CI_Controller{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 
+		
 		$query = $this->Admin_model->getByUsername($username);
 		$user = $query->row();
 

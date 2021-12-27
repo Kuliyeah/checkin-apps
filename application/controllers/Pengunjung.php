@@ -11,6 +11,9 @@ class Pengunjung extends CI_Controller
 
 		//load library form validation
 		$this->load->library('form_validation');
+		
+		//load session
+		$this->load->library('session');
 	}
 
 	public function index()

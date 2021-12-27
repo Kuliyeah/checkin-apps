@@ -10,6 +10,9 @@ class Dashboard extends CI_Controller
         $this->load->model('Pengunjung_model');
         $this->load->model('Mitra_model');
         $this->load->model('Kunjungan_model');
+        
+		//load session
+		$this->load->library('session');
     }
 
     public function index()

@@ -43,7 +43,7 @@
             </div>
         </nav>
     </header>
-
+    
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -70,7 +70,7 @@
             </div>
         </div>
     </div>
-
+    
     <main>
         <img src="assets/image/virus2.png" class="bg-1 wow animate__animated animate__fadeIn">
         <img src="assets/image/virus3.png" class="bg-2 wow animate__animated animate__fadeIn">

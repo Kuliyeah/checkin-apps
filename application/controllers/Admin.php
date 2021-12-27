@@ -11,6 +11,9 @@ class Admin extends CI_Controller
 
 		//load library form validation
 		$this->load->library('form_validation');
+
+		//load session
+		$this->load->library('session');
 	}
 
 
@@ -18,5 +21,9 @@ class Admin extends CI_Controller
 	{
 		$data['admin'] = $this->Admin_model->getDataAdmin();
 
+		if($this->session->userdata('status') == '') { //take them back to signin }
+
 		$this->load->view('admin/index', $data);
+		
 	}
+}
