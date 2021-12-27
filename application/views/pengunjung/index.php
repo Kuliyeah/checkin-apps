@@ -18,7 +18,6 @@
                                     <th scope="col">Umur</th>
                                     <th scope="col">Jenis Kelamin</th>
                                     <th scope="col">Status Kesehatan</th>
-                                    <th scope="col" width="125px">Opsi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,10 +32,6 @@
                                         <td><?php echo $data->umurPengunjung ?></td>
                                         <td><?php echo $data->jenisKelaminPengunjung ?></td>
                                         <td><?php echo $data->statusKesehatan ?></td>
-                                        <td>
-                                            <a href="<?= base_url() ?>pengunjung/detailPengunjung?idPengunjung=<?= $data->idPengunjung ?>" class="btn btn-sm btn-info w-100 mb-2" id="update">Detail</a>
-                                            <a href="#" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
-                                        </td>
                                     </tr>
                                 <?php
                                     $i++;
