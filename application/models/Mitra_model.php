@@ -7,6 +7,12 @@ class Mitra_model extends CI_Model
 		return $this->db->get('mitra');
 	}
 
+	public function getDataMitraById($idMitra)
+	{
+		$this->db->where('idMitra', $idMitra);
+		return $this->db->get('mitra');
+	}
+
 	public function tambah_mitra($data)
 	{
 		return $this->db->insert('mitra', $data);
@@ -16,6 +22,11 @@ class Mitra_model extends CI_Model
 	{
 		$this->db->where('idMitra', $idMitra);
 		$this->db->delete('mitra');
+	}
+
+	public function update_mitra($idMitra, $data)
+	{
+		$this->db->update('mitra', $data, array('idMitra' => $idMitra));
 	}
 
 	public function countRowsMitra()

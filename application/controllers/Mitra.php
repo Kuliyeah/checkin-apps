@@ -12,7 +12,6 @@ class Mitra extends CI_Controller
 		$this->load->library('form_validation');
 	}
 
-
 	public function index()
 	{
 		$data['mitra'] = $this->Mitra_model->getDataMitra()->result();
@@ -21,9 +20,18 @@ class Mitra extends CI_Controller
 		$this->load->view('mitra/index', $data);
 		$this->load->view('templates/footer');
 	}
+
+	public function formInputMitra()
+	{
+		$data['judul'] = "Form Input Mitra";
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('mitra/input_mitra');
+		$this->load->view('templates/footer');
+	}
+
 	public function tambahMitra()
 	{
-
 		$data = array(
 			'namaMitra' => $this->input->post('namaMitra'),
 			'alamatMitra' => $this->input->post('alamatMitra'),
@@ -34,9 +42,9 @@ class Mitra extends CI_Controller
 		$this->Mitra_model->tambah_mitra($data);
 		redirect(base_url() . "mitra");
 	}
+
 	public function tambahMitraHome()
 	{
-
 		$data = array(
 			'namaMitra' => $this->input->post('namaMitra'),
 			'alamatMitra' => $this->input->post('alamatMitra'),
@@ -47,13 +55,30 @@ class Mitra extends CI_Controller
 		$this->Mitra_model->tambah_mitra($data);
 		redirect(base_url() . "home");
 	}
-	public function formInputMitra()
+
+	public function formUpdateMitra()
 	{
-		$data['judul'] = "Form Input Mitra";
+        $idMitra = $this->input->get('idMitra');
+        $data['edit'] = $this->Mitra_model->getDataMitraById($idMitra)->row_array();
+		$data['judul'] = "Form Update Mitra";
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('mitra/input_mitra');
+		$this->load->view('mitra/update_mitra', $data);
 		$this->load->view('templates/footer');
+	}
+
+	public function updateMitra()
+	{
+        $idMitra = $this->input->post('idMitra');
+		$data = array(
+			'namaMitra' => $this->input->post('namaMitra'),
+			'alamatMitra' => $this->input->post('alamatMitra'),
+			'noHpMitra' => $this->input->post('noHpMitra'),
+			'jenisUsaha' => $this->input->post('jenisUsaha'),
+			'deskripsi' => $this->input->post('deskripsi'),
+		);
+		$this->Mitra_model->update_mitra($idMitra, $data);
+		redirect(base_url() . "mitra");
 	}
 
 	public function hapusMitra()
