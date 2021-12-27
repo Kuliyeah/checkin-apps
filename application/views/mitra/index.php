@@ -37,7 +37,7 @@
 										<td><?php echo $data->deskripsi ?></td>
 
 										<td>
-											<a href="#" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
+											<a href="<?php echo base_url('mitra/formUpdateMitra?idMitra='.$data->idMitra) ?>" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
 											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
 										</td>
 									</tr>
