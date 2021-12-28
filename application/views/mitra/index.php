@@ -2,7 +2,7 @@
 	<div class="p-5 col-md-10 shadow mb-5 ml-container" style="border-radius: 30px;">
 		<div class="row">
 			<div class="col-lg-12">
-				<a href="<?php echo base_url() . "mitra/formInputMitra" ?>" class="btn btn-primary mb-2">
+				<a href="<?php echo base_url() . "mitra/tambahMitra" ?>" class="btn btn-primary mb-2">
 					Create New Data
 				</a>
 

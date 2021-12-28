@@ -12,27 +12,27 @@
                 <form class="row justify-content-center" method="post" action="<?= base_url() ?>mitra/tambahMitra">
                     <div>
                         <label for="namaMitra" class="form-label">Nama Mitra</label>
-                        <input type="text" class="form-control" id="namaMitra" name="namaMitra">
+                        <input type="text" class="form-control" id="namaMitra" name="namaMitra"><small class="form-text text-danger"><?= form_error('namaMitra') ?>.</small>
                         <br>
 
                         <label for="alamat" class="form-label">Alamat Mitra</label>
-                        <input type="text" class="form-control" id="alamat" name="alamatMitra">
+                        <input type="text" class="form-control" id="alamat" name="alamatMitra"><small class="form-text text-danger"><?= form_error('alamatMitra') ?>.</small>
                         <br>
 
                         <label for="noHpMitra" class="form-label">No Handphone/Telephon</label>
-                        <input type="text" class="form-control" id="noHpMitra" name="noHpMitra">
+                        <input type="text" class="form-control" id="noHpMitra" name="noHpMitra"><small class="form-text text-danger"><?= form_error('noHpMitra') ?>.</small>
                         <br>
 
                         <label for="jenisUsaha" class="form-label">Bidang Usaha</label>
-                        <input type="text" class="form-control" id="jenisUsaha" name="jenisUsaha">
+                        <input type="text" class="form-control" id="jenisUsaha" name="jenisUsaha"><small class="form-text text-danger"><?= form_error('jenisUsaha') ?>.</small>
                         <br>
 
                         <label for="deskripsi" class="form-label">Deskripsi Usaha</label>
-                        <textarea type="text" class="form-control" id="deskripsi" rows="6" name="deskripsi"></textarea>
+                        <textarea type="text" class="form-control" id="deskripsi" rows="6" name="deskripsi"></textarea><small class="form-text text-danger"><?= form_error('deskripsi') ?>.</small>
                         <br>
                         <label for="foto" class="form-label">Foto Usaha</label>
                         <br>
-                        <input type="file" name="fotoUsaha" size="20">
+                        <input type="file" name="fotoUsaha" size="20"><?= form_error('fotoUsaha') ?>.</small>
                         <br><br>                     
                     </div>
                     <div class="float-end">

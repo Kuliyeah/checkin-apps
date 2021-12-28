@@ -51,7 +51,7 @@
                     <div style="margin-top:100px;">
                         <h5 class="text-center mt-5 mb-3"><i>"Berkontribusilah bagi kesehatan bersama"</i></h5>
                         <label for="namaMitra" class="form-label">Nama Mitra</label>
-                        <input type="text" class="form-control" id="namaMitra" name="namaMitra">
+                        <input type="text" class="form-control" id="namaMitra" name="namaMitra"><small class="form-text text-danger"><?= form_error('namaMitra') ?>.</small>
                         <br>
 
                         <label for="alamat" class="form-label">Alamat Mitra</label>

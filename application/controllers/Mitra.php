@@ -35,12 +35,13 @@ class Mitra extends CI_Controller
 
 	public function tambahMitra()
 	{
-		$this->form_validation->set_rules('namaMitra', 'namaMitra','required');
-		$this->form_validation->set_rules('alamatMitra', 'alamatMitra','required');
-		$this->form_validation->set_rules('noHpMitra', 'noHpMitra','required');
-		$this->form_validation->set_rules('jenisUsaha', 'jenisUsaha','required');
-		$this->form_validation->set_rules('deskripsi', 'deskripsi','required');
-		$this->form_validation->set_rules('fotoUsaha', 'fotoUsaha','required');		
+
+		$this->form_validation->set_rules('namaMitra', 'Nama Mitra','required');
+		$this->form_validation->set_rules('alamatMitra', 'Alamat Mitra','required');
+		$this->form_validation->set_rules('noHpMitra', 'No Hp Mitra','required');
+		$this->form_validation->set_rules('jenisUsaha', 'Jenis Usaha','required');
+		$this->form_validation->set_rules('deskripsi', 'Deskripsi','required');
+		$this->form_validation->set_rules('fotoUsaha', 'Foto Usaha','required');		
 		$data = array(
 			'namaMitra' => $this->input->post('namaMitra'),
 			'alamatMitra' => $this->input->post('alamatMitra'),
@@ -49,13 +50,29 @@ class Mitra extends CI_Controller
 			'deskripsi' => $this->input->post('deskripsi'),
 			'fotoUsaha' => $this->input->post('fotoUsaha')
 		);
-		$this->Mitra_model->tambah_mitra($data);
-		redirect(base_url() . "mitra");
+		if($this->form_validation->run() == FALSE){
+					$data['judul'] = "Form Input Mitra";
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('mitra/input_mitra');
+		$this->load->view('templates/footer');
+		}else{
+			$this->Mitra_model->tambah_mitra($data);
+			echo '<script type ="text/JavaScript">';  
+			echo 'alert("Berhasil Input Mitra")';  
+			echo '</script>'; 
+					$data['judul'] = "Form Input Mitra";
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('mitra/input_mitra');
+		$this->load->view('templates/footer');
+		}
+		//redirect(base_url() . "mitra");
 	}
 
 	public function tambahMitraHome()
 	{
-
+		
 		$this->form_validation->set_rules('namaMitra', 'Nama Mitra','required');
 		$this->form_validation->set_rules('alamatMitra', 'Alamat Mitra','required');
 		$this->form_validation->set_rules('noHpMitra', 'No Hp Mitra','required');
@@ -77,8 +94,10 @@ class Mitra extends CI_Controller
 			$this->load->view('home/mitra');
 		}else{
 			$this->Mitra_model->tambah_mitra($data);
-			$this->session->set_flashdata('flash','Input Mitra Berhasil');
-			redirect(base_url() . "home");
+			echo '<script type ="text/JavaScript">';  
+			echo 'alert("Berhasil Input Mitra")';  
+			echo '</script>'; 
+			$this->load->view('home/mitra');
 		}
 	}
 
