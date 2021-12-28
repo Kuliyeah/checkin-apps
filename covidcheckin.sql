@@ -78,7 +78,8 @@ CREATE TABLE `mitra` (
   `alamatMitra` varchar(100) NOT NULL,
   `noHpMitra` varchar(12) NOT NULL,
   `jenisUsaha` varchar(100) NOT NULL,
-  `deskripsi` text NOT NULL
+  `deskripsi` text NOT NULL,
+	'fotoUsaha' varchat(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
