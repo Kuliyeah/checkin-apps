@@ -33,7 +33,7 @@
                             <a class="nav-link lato-bold" href="#kontak" id="nav_kontak">Kontak Kami</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link lato-black text-success" href="home/daftar" id="mitra">Become Our Mitra</a>
+                            <a class="nav-link lato-black text-success" href="<?= base_url(); ?>mitra" id="mitra">Become Our Mitra</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-success px-3 nav-link text-white nav_button" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>

@@ -30,6 +30,10 @@
                         <label for="deskripsi" class="form-label">Deskripsi Usaha</label>
                         <textarea type="text" class="form-control" id="deskripsi" rows="6" name="deskripsi"></textarea>
                         <br>
+                        <label for="foto" class="form-label">Foto Usaha</label>
+                        <br>
+                        <input type="file" name="fotoUsaha" size="20">
+                        <br><br>                     
                     </div>
                     <div class="float-end">
                         <a class="btn btn-danger" id="back" href="<?= base_url() ?>mitra">Batalkan</a>

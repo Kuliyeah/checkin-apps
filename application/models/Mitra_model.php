@@ -33,4 +33,5 @@ class Mitra_model extends CI_Model
 	{
 		return $this->db->get('mitra')->num_rows();
 	}
+	
 }

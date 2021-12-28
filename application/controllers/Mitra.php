@@ -35,12 +35,19 @@ class Mitra extends CI_Controller
 
 	public function tambahMitra()
 	{
+		$this->form_validation->set_rules('namaMitra', 'namaMitra','required');
+		$this->form_validation->set_rules('alamatMitra', 'alamatMitra','required');
+		$this->form_validation->set_rules('noHpMitra', 'noHpMitra','required');
+		$this->form_validation->set_rules('jenisUsaha', 'jenisUsaha','required');
+		$this->form_validation->set_rules('deskripsi', 'deskripsi','required');
+		$this->form_validation->set_rules('fotoUsaha', 'fotoUsaha','required');		
 		$data = array(
 			'namaMitra' => $this->input->post('namaMitra'),
 			'alamatMitra' => $this->input->post('alamatMitra'),
 			'noHpMitra' => $this->input->post('noHpMitra'),
 			'jenisUsaha' => $this->input->post('jenisUsaha'),
 			'deskripsi' => $this->input->post('deskripsi'),
+			'fotoUsaha' => $this->input->post('fotoUsaha')
 		);
 		$this->Mitra_model->tambah_mitra($data);
 		redirect(base_url() . "mitra");
@@ -48,15 +55,31 @@ class Mitra extends CI_Controller
 
 	public function tambahMitraHome()
 	{
+
+		$this->form_validation->set_rules('namaMitra', 'Nama Mitra','required');
+		$this->form_validation->set_rules('alamatMitra', 'Alamat Mitra','required');
+		$this->form_validation->set_rules('noHpMitra', 'No Hp Mitra','required');
+		$this->form_validation->set_rules('jenisUsaha', 'Jenis Usaha','required');
+		$this->form_validation->set_rules('deskripsi', 'Deskripsi','required');
+		$this->form_validation->set_rules('fotoUsaha', 'Foto Usaha','required');
+
 		$data = array(
 			'namaMitra' => $this->input->post('namaMitra'),
 			'alamatMitra' => $this->input->post('alamatMitra'),
 			'noHpMitra' => $this->input->post('noHpMitra'),
 			'jenisUsaha' => $this->input->post('jenisUsaha'),
 			'deskripsi' => $this->input->post('deskripsi'),
+			'fotoUsaha' => $this->input->post('fotoUsaha')
 		);
-		$this->Mitra_model->tambah_mitra($data);
-		redirect(base_url() . "home");
+		//redirect(base_url() . "home");
+
+		if($this->form_validation->run() == FALSE){
+			$this->load->view('home/mitra');
+		}else{
+			$this->Mitra_model->tambah_mitra($data);
+			$this->session->set_flashdata('flash','Input Mitra Berhasil');
+			redirect(base_url() . "home");
+		}
 	}
 
 	public function formUpdateMitra()
@@ -79,6 +102,7 @@ class Mitra extends CI_Controller
 			'noHpMitra' => $this->input->post('noHpMitra'),
 			'jenisUsaha' => $this->input->post('jenisUsaha'),
 			'deskripsi' => $this->input->post('deskripsi'),
+			'fotoUsaha' => $this->input->post('fotoUsaha')
 		);
 		$this->Mitra_model->update_mitra($idMitra, $data);
 		redirect(base_url() . "mitra");
@@ -91,4 +115,20 @@ class Mitra extends CI_Controller
 		$this->Mitra_model->hapus_mitra($idMitra);
 		redirect(base_url() . 'mitra/');
 	}
+	
+	/*public function fotoMitra()
+	{
+		$config['upload_path']          = './assets/imageMitra/';
+        $config['allowed_types']        = 'jpg|png|JPG|jpeg';
+    	$config['max_size']             = 4000;
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
+
+		$this->load->library('upload', $config);
+        if (!$this->upload->do_upload('fotoUsaha')) {
+            $this->load->view('', array('error' => $this->upload->display_errors()));
+        } else {
+            $this->load->view('V_upload_success', array('upload_data' => $this->upload->data()));
+        }
+	}*/
 }
