@@ -261,7 +261,6 @@
 <script type="text/javascript " src="./node_modules/jquery/dist/jquery.js"></script>
 <script type="text/javascript " src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript " src="./node_modules/wow.js/dist/wow.js"></script>
-<!-- <script type="text/javascript " src="./assets/js/navbar.js"></script> -->
 <script type="text/javascript " src="./assets/js/carousel.js"></script>
 
 <script>
