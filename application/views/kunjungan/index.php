@@ -15,6 +15,8 @@
                                     <th scope="col">Nama Pengunjung</th>
                                     <th scope="col">Nama Mitra</th>
                                     <th scope="col">Jenis Usaha</th>
+                                    <th scope="col">Check-in</th>
+                                    <th scope="col">Check-out</th>
                                     <th scope="col">Status</th>
                                     <th scope="col" width="100px">Opsi</th>
                                 </tr>
@@ -28,6 +30,8 @@
                                         <td><?php echo $data->namaPengunjung ?></td>
                                         <td><?php echo $data->namaMitra ?></td>
                                         <td><?php echo $data->jenisUsaha ?></td>
+                                        <td><?php echo $data->checkin ?></td>
+                                        <td><?php echo $data->checkout ?></td>
                                         <td><?php echo $data->statusKunjungan ?></td>
                                         <td>
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $data->idPengunjung ?>">
