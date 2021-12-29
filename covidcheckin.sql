@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Des 2021 pada 15.37
+-- Waktu pembuatan: 29 Des 2021 pada 15.52
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 7.4.26
 
@@ -51,6 +51,7 @@ CREATE TABLE `kunjungan` (
   `idKunjungan` int(100) NOT NULL,
   `idPengunjung` int(10) NOT NULL,
   `idMitra` int(10) NOT NULL,
+  `tanggal` varchar(255) NOT NULL,
   `checkin` varchar(255) NOT NULL,
   `checkout` varchar(255) NOT NULL,
   `statusKunjungan` enum('Selesai','Dalam Kunjungan') NOT NULL
@@ -60,13 +61,13 @@ CREATE TABLE `kunjungan` (
 -- Dumping data untuk tabel `kunjungan`
 --
 
-INSERT INTO `kunjungan` (`idKunjungan`, `idPengunjung`, `idMitra`, `checkin`, `checkout`, `statusKunjungan`) VALUES
-(1, 6, 3, '09:00:00', '10:15:00', 'Selesai'),
-(2, 1, 1, '09:10:00', '', 'Dalam Kunjungan'),
-(3, 4, 3, '09:59:50', '12:00:17', 'Selesai'),
-(4, 2, 4, '13:21:00', '14:05:01', 'Selesai'),
-(5, 3, 4, '13:25:55', '', 'Dalam Kunjungan'),
-(6, 5, 5, '14:22:04', '', 'Dalam Kunjungan');
+INSERT INTO `kunjungan` (`idKunjungan`, `idPengunjung`, `idMitra`, `tanggal`, `checkin`, `checkout`, `statusKunjungan`) VALUES
+(1, 6, 3, '29-12-2021', '09:00:00', '10:15:00', 'Selesai'),
+(2, 1, 1, '29-12-2021', '09:10:00', '-', 'Dalam Kunjungan'),
+(3, 4, 3, '29-12-2021', '09:59:50', '12:00:17', 'Selesai'),
+(4, 2, 4, '29-12-2021', '13:21:00', '14:05:01', 'Selesai'),
+(5, 3, 4, '29-12-2021', '13:25:55', '-', 'Dalam Kunjungan'),
+(6, 5, 5, '29-12-2021', '14:22:04', '-', 'Dalam Kunjungan');
 
 -- --------------------------------------------------------
 
