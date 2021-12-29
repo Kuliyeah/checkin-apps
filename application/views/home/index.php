@@ -36,14 +36,15 @@
                             <a class="nav-link lato-black text-success" href="mitra/tambahMitraHome" id="mitra">Become Our Mitra</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-success px-3 nav-link text-white nav_button" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>
+                            <a class="btn btn-success px-3 nav-link text-white nav_button" href="#login" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
+    <section id="login">
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -70,7 +71,7 @@
             </div>
         </div>
     </div>
-    
+</section>
     <main>
         <img src="assets/image/virus2.png" class="bg-1 wow animate__animated animate__fadeIn">
         <img src="assets/image/virus3.png" class="bg-2 wow animate__animated animate__fadeIn">

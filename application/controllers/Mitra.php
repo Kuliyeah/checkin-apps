@@ -86,7 +86,8 @@ class Mitra extends CI_Controller
 			'noHpMitra' => $this->input->post('noHpMitra'),
 			'jenisUsaha' => $this->input->post('jenisUsaha'),
 			'deskripsi' => $this->input->post('deskripsi'),
-			'fotoUsaha' => $this->input->post('fotoUsaha')
+			'fotoUsaha' => $this->input->post('fotoUsaha'),
+			'status' => 0
 		);
 		//redirect(base_url() . "home");
 

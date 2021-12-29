@@ -49,6 +49,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="<?=base_url(); ?>pendaftar" class="<?php if(url_string()=='pendaftar') echo 'actived' ?>">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <div class="position-absolute tooltips">Pendaftar</div>
+                            </a>                                
+                        </li>
+                        <li>
                             <a href="<?= base_url(); ?>informasi" class="<?php if (uri_string() === 'informasi') echo 'actived' ?>">
                                 <i class="bi bi-info-circle-fill"></i>
                                 <div class="position-absolute tooltips">Informasi</div>
