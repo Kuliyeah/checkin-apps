@@ -9,7 +9,7 @@
                 </ol>
             </div>
             <div class="mt-2 col-md-12">
-                <form class="row justify-content-center" method="post" action="<?= base_url() ?>mitra/tambahMitra">
+                <form class="row justify-content-center" method="post" action="<?= base_url() ?>mitra/tambahMitra" enctype='multipart/form-data'>
                     <div>
                         <label for="namaMitra" class="form-label">Nama Mitra</label>
                         <input type="text" class="form-control" id="namaMitra" name="namaMitra"><small class="form-text text-danger"><?= form_error('namaMitra') ?></small>
