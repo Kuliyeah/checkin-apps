@@ -21,6 +21,7 @@
 									<th scope="col">No HP</th>
 									<th scope="col">Bidang Usaha</th>
 									<th scope="col" width="250px">Deskripsi</th>
+									<th scope="col">Status</th>
 									<th scope="col" width="125px">Opsi</th>
 								</tr>
 							</thead>
@@ -35,10 +36,12 @@
 										<td><?php echo $data->noHpMitra ?></td>
 										<td><?php echo $data->jenisUsaha ?></td>
 										<td><?php echo $data->deskripsi ?></td>
+										<td><?php echo $data->status ?></td>
 
 										<td>
-											<a href="<?php echo base_url('mitra/formUpdateMitra?idMitra='.$data->idMitra) ?>" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100" id="delete">Delete</a>
+											<a href="<?php echo base_url('mitra/formUpdateMitra?idMitra=' . $data->idMitra) ?>" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
+											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100 mb-2" id="delete">Delete</a>
+											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-primary w-100" id="verifikasi">Verifikasi</a>
 										</td>
 									</tr>
 								<?php
