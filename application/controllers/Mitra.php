@@ -69,6 +69,7 @@ class Mitra extends CI_Controller
 					'fotoUsaha' => $imagename,
 					'status' => "Sudah Verifikasi"
 				);
+				$this->session->set_flashdata('flash', 'Ditambahkan');
 				$result = $this->Mitra_model->tambah_mitra($data);
 				echo '<script type ="text/JavaScript">';
 				echo 'alert("Berhasil Input Mitra")';
@@ -138,6 +139,8 @@ class Mitra extends CI_Controller
 			'fotoUsaha' => $this->input->post('fotoUsaha'),
 			'status' => $this->input->post('status')
 		);
+
+		$this->session->set_flashdata('flash', 'Diupdate');
 		$this->Mitra_model->update_mitra($idMitra, $data);
 		redirect(base_url() . "mitra");
 	}
@@ -145,7 +148,7 @@ class Mitra extends CI_Controller
 	public function verifikasiMitra()
 	{
 		$idMitra = $this->input->get('idMitra');
-		
+
 		$this->Mitra_model->verifikasi_mitra($idMitra);
 		redirect(base_url() . "mitra/");
 	}
@@ -153,6 +156,8 @@ class Mitra extends CI_Controller
 	public function hapusMitra()
 	{
 		$idMitra = $this->input->get('idMitra');
+
+		$this->session->set_flashdata('flash', 'Dihapus');
 		$this->Mitra_model->hapus_mitra($idMitra);
 		redirect(base_url() . 'mitra/');
 	}
