@@ -4,7 +4,7 @@ class Mitra_model extends CI_Model
 {
 	public function getDataMitra()
 	{
-		$this->db->order_by('idMitra', 'DESC');
+		$this->db->order_by('status', 'ASC');
 		return $this->db->get('mitra');
 	}
 
