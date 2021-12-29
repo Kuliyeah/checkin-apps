@@ -33,7 +33,7 @@
                             <a class="nav-link lato-bold" href="../#kontak" id="nav_kontak">Kontak Kami</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link lato-black text-success" href="../home/daftar" id="nav_kontak">Become Our Mitra</a>
+                            <a class="nav-link lato-black text-success" href="../mitra/tambahMitraHome" id="nav_kontak">Become Our Mitra</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-success px-3 nav-link text-white nav_button" href="" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>
@@ -76,13 +76,40 @@
                         <br><br>   
                     </div>
                     <div class="float-end mb-5">
-                        <a class="btn btn-danger" id="back" href="<?= base_url() ?>mitra">Batalkan</a>
+                        <a class="btn btn-danger" id="back" href="<?= base_url() ?>">Batalkan</a>
                         <button type="submit" class="btn btn-success" id="save">Simpan</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="<?=base_url()?>home/login" method="POST">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="example" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="********" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                        <input type="submit" class="btn btn-success" value="Login" id="login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-light text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.1);">
@@ -91,11 +118,10 @@
     </footer>
 </body>
 
-<script type="text/javascript " src="./node_modules/jquery/dist/jquery.js"></script>
-<script type="text/javascript " src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-<script type="text/javascript " src="./node_modules/wow.js/dist/wow.js"></script>
-<!-- <script type="text/javascript " src="./assets/js/navbar.js"></script> -->
-<script type="text/javascript " src="./assets/js/carousel.js"></script>
+<script type="text/javascript " src="../node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript " src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript " src="../node_modules/wow.js/dist/wow.js"></script>
+<script type="text/javascript " src="../assets/js/carousel.js"></script>
 
 <script>
     new WOW().init();
