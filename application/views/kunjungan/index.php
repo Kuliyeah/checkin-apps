@@ -15,6 +15,7 @@
                                     <th scope="col">Nama Pengunjung</th>
                                     <th scope="col">Nama Mitra</th>
                                     <th scope="col">Jenis Usaha</th>
+                                    <th scope="col">Tanggal</th>
                                     <th scope="col">Check-in</th>
                                     <th scope="col">Check-out</th>
                                     <th scope="col">Status</th>
@@ -30,6 +31,7 @@
                                         <td><?php echo $data->namaPengunjung ?></td>
                                         <td><?php echo $data->namaMitra ?></td>
                                         <td><?php echo $data->jenisUsaha ?></td>
+                                        <td><?php echo $data->tanggal ?></td>
                                         <td><?php echo $data->checkin ?></td>
                                         <td><?php echo $data->checkout ?></td>
                                         <td><?php echo $data->statusKunjungan ?></td>
