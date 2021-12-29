@@ -13,7 +13,7 @@
 
 					<div class="panel-body">
 						<?php if ($this->session->flashdata('flash')) : ?>
-							<div class="alert alert-success alert-dismissible fade show" role="alert">
+							<div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
 								Data <strong>BERHASIL</strong> <?php echo $this->session->flashdata('flash') ?>
 								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 							</div>
@@ -46,7 +46,7 @@
 													else echo "text-danger"; ?>"><?php echo $data->status ?></td>
 										<td>
 											<a href="<?php echo base_url('mitra/formUpdateMitra?idMitra=' . $data->idMitra) ?>" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
-											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100 mb-2" id="delete">Delete</a>
+											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100 mb-2" id="delete" onclick="return confirm('Apakah Anda yakin akan menghapus data <?= $data->namaMitra ?>')">Delete</a>
 											<?php if ($data->status != "Sudah Verifikasi") { ?>
 												<a href="<?php echo base_url('mitra/verifikasiMitra?idMitra=' . $data->idMitra) ?>" class="btn btn-sm btn-primary w-100" id="verifikasi">Verifikasi</a>
 											<?php } ?>
