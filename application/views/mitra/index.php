@@ -42,13 +42,13 @@
 											<a href="<?php echo base_url('mitra/formUpdateMitra?idMitra=' . $data->idMitra) ?>" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
 											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100 mb-2" id="delete">Delete</a>
 											<?php if ($data->status != "Sudah Verifikasi") { ?>
-												<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-primary w-100" id="verifikasi">Verifikasi</a>
-											<? } ?>
+												<a href="<?php echo base_url('mitra/verifikasiMitra?idMitra=' . $data->idMitra) ?>" class="btn btn-sm btn-primary w-100" id="verifikasi">Verifikasi</a>
+											<?php } ?>
 										</td>
 									</tr>
 								<?php
 									$i++;
-								}}
+								}
 								?>
 							</tbody>
 						</table>
