@@ -36,22 +36,19 @@
 										<td><?php echo $data->noHpMitra ?></td>
 										<td><?php echo $data->jenisUsaha ?></td>
 										<td><?php echo $data->deskripsi ?></td>
-										<td class="
-										<?php
-										if ($data->status == "Sudah Verifikasi") echo "text-success";
-										else echo "text-danger";
-										?>
-										"><?php echo $data->status ?></td>
-
+										<td class="<?php if ($data->status == "Sudah Verifikasi") echo "text-success";
+													else echo "text-danger"; ?>"><?php echo $data->status ?></td>
 										<td>
 											<a href="<?php echo base_url('mitra/formUpdateMitra?idMitra=' . $data->idMitra) ?>" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
 											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-danger w-100 mb-2" id="delete">Delete</a>
-											<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-primary w-100" id="verifikasi">Verifikasi</a>
+											<?php if ($data->status != "Sudah Verifikasi") { ?>
+												<a href="<?= base_url() ?>mitra/hapusMitra?idMitra=<?= $data->idMitra ?>" class="btn btn-sm btn-primary w-100" id="verifikasi">Verifikasi</a>
+											<? } ?>
 										</td>
 									</tr>
 								<?php
 									$i++;
-								}
+								}}
 								?>
 							</tbody>
 						</table>
