@@ -36,7 +36,12 @@
 										<td><?php echo $data->noHpMitra ?></td>
 										<td><?php echo $data->jenisUsaha ?></td>
 										<td><?php echo $data->deskripsi ?></td>
-										<td><?php echo $data->status ?></td>
+										<td class="
+										<?php
+										if ($data->status == "Sudah Verifikasi") echo "text-success";
+										else echo "text-danger";
+										?>
+										"><?php echo $data->status ?></td>
 
 										<td>
 											<a href="<?php echo base_url('mitra/formUpdateMitra?idMitra=' . $data->idMitra) ?>" class="btn btn-sm btn-warning w-100 mb-2" id="update">Update</a>
