@@ -33,5 +33,10 @@ class Mitra_model extends CI_Model
 	{
 		return $this->db->get('mitra')->num_rows();
 	}
+
+	public function verifikasi_mitra($idMitra)
+	{
+		$this->db->update('mitra', array('status' => 'Sudah Verifikasi'), array('idMitra' => $idMitra));
+	}
 	
 }
