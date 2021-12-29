@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="<?=base_url()?>/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="<?=base_url()?>/node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="<?=base_url()?>/node_modules/animate.css/animate.css">
@@ -36,7 +36,7 @@
                             <a class="nav-link lato-black text-success" href="../home/daftar" id="nav_kontak">Become Our Mitra</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-success px-3 nav-link text-white nav_button" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>
+                            <a class="btn btn-success px-3 nav-link text-white nav_button" href="" data-bs-toggle="modal" data-bs-target="#loginModal">Masuk</a>
                         </li>
                     </ul>
                 </div>
