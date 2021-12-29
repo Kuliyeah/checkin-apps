@@ -126,6 +126,14 @@ class Mitra extends CI_Controller
 		redirect(base_url() . "mitra");
 	}
 
+	public function verifikasiMitra()
+	{
+		$idMitra = $this->input->get('idMitra');
+		
+		$this->Mitra_model->verifikasi_mitra($idMitra);
+		redirect(base_url() . "mitra/");
+	}
+
 	public function hapusMitra()
 	{
 		$idMitra = $this->input->get('idMitra');
