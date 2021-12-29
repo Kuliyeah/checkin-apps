@@ -12,6 +12,12 @@
 					</div>
 
 					<div class="panel-body">
+						<?php if ($this->session->flashdata('flash')) : ?>
+							<div class="alert alert-success alert-dismissible fade show" role="alert">
+								Data <strong>BERHASIL</strong> <?php echo $this->session->flashdata('flash') ?>
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+						<?php endif; ?>
 						<table id="example" class="table table-bordered table-hover">
 							<thead>
 								<tr>
