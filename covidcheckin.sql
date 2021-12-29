@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Des 2021 pada 16.04
--- Versi server: 10.4.19-MariaDB
--- Versi PHP: 8.0.7
+-- Generation Time: Dec 29, 2021 at 02:51 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`idAdmin`, `namaAdmin`, `usernameAdmin`, `passwordAdmin`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`idAdmin`, `namaAdmin`, `usernameAdmin`, `passwordAdmin`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kunjungan`
+-- Table structure for table `kunjungan`
 --
 
 CREATE TABLE `kunjungan` (
@@ -55,7 +55,7 @@ CREATE TABLE `kunjungan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kunjungan`
+-- Dumping data for table `kunjungan`
 --
 
 INSERT INTO `kunjungan` (`idKunjungan`, `idPengunjung`, `idMitra`, `statusKunjungan`) VALUES
@@ -69,7 +69,7 @@ INSERT INTO `kunjungan` (`idKunjungan`, `idPengunjung`, `idMitra`, `statusKunjun
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mitra`
+-- Table structure for table `mitra`
 --
 
 CREATE TABLE `mitra` (
@@ -79,24 +79,27 @@ CREATE TABLE `mitra` (
   `noHpMitra` varchar(12) NOT NULL,
   `jenisUsaha` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL,
-  `fotoUsaha` varchar(100) NOT NULL
+  `fotoUsaha` varchar(100) NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'Belum Verifikasi'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `mitra`
+-- Dumping data for table `mitra`
 --
 
-INSERT INTO `mitra` (`idMitra`, `namaMitra`, `alamatMitra`, `noHpMitra`, `jenisUsaha`, `deskripsi`) VALUES
-(1, 'Lasco Kaffe', 'Jl. Buah Batu No.54, Burangrang, Kec. Lengkong, Kota Bandung, Jawa Barat 40262', '0821000000', 'Kaffe', 'Menjual aneka minuman kopi dengan lingkungan yang nyaman'),
-(2, 'Hoods Coffee', 'Jl. Kw. Industri Tunas Ruko No.1, Belian, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29444', '082111190909', 'Kaffe', 'Menjual aneka minuman dan tempat santai'),
-(3, 'Lotte Mart', 'Jl. Trans Sumatera, Lampung', '08219999990', 'Modern Market', 'Tempat grosir termurah'),
-(4, 'Transmart Bubat', 'Terusan Buah Batu, Bandung', '08222909900', 'Modern market dan tempat hiburan', 'tempat hiburan keluarga dan penjualan'),
-(5, 'Telyu Coffee', 'Lingkungan Telkom University, Bandung, Indonesia', '088131434225', 'Kaffe', 'Menjual aneka minuman mahasiswa');
+INSERT INTO `mitra` (`idMitra`, `namaMitra`, `alamatMitra`, `noHpMitra`, `jenisUsaha`, `deskripsi`, `fotoUsaha`, `status`) VALUES
+(1, 'Lasco Kaffe1', 'Jl. Buah Batu No.54, Burangrang, Kec. Lengkong, Kota Bandung, Jawa Barat 402621', '08210000001', 'Kaffe1', 'Kaffe1', '', 'Belum Verifikasi'),
+(2, 'Hoods Coffee', 'Jl. Kw. Industri Tunas Ruko No.1, Belian, Kec. Batam Kota, Kota Batam, Kepulauan Riau 29444', '082111190909', 'Kaffe', 'Menjual aneka minuman dan tempat santai', '', 'Belum Verifikasi'),
+(3, 'Lotte Mart', 'Jl. Trans Sumatera, Lampung', '08219999990', 'Modern Market', 'Tempat grosir termurah', '', 'Belum Verifikasi'),
+(4, 'Transmart Bubat', 'Terusan Buah Batu, Bandung', '08222909900', 'Modern market dan tempat hiburan', 'tempat hiburan keluarga dan penjualan', '', 'Belum Verifikasi'),
+(5, 'Telyu Coffee', 'Lingkungan Telkom University, Bandung, Indonesia', '088131434225', 'Kaffe', 'Menjual aneka minuman mahasiswa', '', 'Belum Verifikasi'),
+(8, 'Lovanto', 'Lovanto 2', '08210000001', 'Lovanto 3', 'Lovanto 4', '', 'Belum Verifikasi'),
+(9, 'Lasco Kaffe1', 'Jl. Buah Batu No.54, Burangrang, Kec. Lengkong, Kota Bandung, Jawa Barat 402621', '08210000001', 'Kaffe1', 'dwadaw aw daw dwda wd a dwa daw', 'TTD.png', 'Sudah Verifikasi');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengunjung`
+-- Table structure for table `pengunjung`
 --
 
 CREATE TABLE `pengunjung` (
@@ -110,7 +113,7 @@ CREATE TABLE `pengunjung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pengunjung`
+-- Dumping data for table `pengunjung`
 --
 
 INSERT INTO `pengunjung` (`idPengunjung`, `namaPengunjung`, `alamatPengunjung`, `noHpPengunjung`, `umurPengunjung`, `jenisKelaminPengunjung`, `statusKesehatan`) VALUES
@@ -126,13 +129,13 @@ INSERT INTO `pengunjung` (`idPengunjung`, `namaPengunjung`, `alamatPengunjung`, 
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`idAdmin`);
 
 --
--- Indeks untuk tabel `kunjungan`
+-- Indexes for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD PRIMARY KEY (`idKunjungan`),
@@ -140,51 +143,51 @@ ALTER TABLE `kunjungan`
   ADD KEY `fk_idMitra` (`idMitra`);
 
 --
--- Indeks untuk tabel `mitra`
+-- Indexes for table `mitra`
 --
 ALTER TABLE `mitra`
   ADD PRIMARY KEY (`idMitra`);
 
 --
--- Indeks untuk tabel `pengunjung`
+-- Indexes for table `pengunjung`
 --
 ALTER TABLE `pengunjung`
   ADD PRIMARY KEY (`idPengunjung`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `idAdmin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `kunjungan`
+-- AUTO_INCREMENT for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   MODIFY `idKunjungan` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `mitra`
+-- AUTO_INCREMENT for table `mitra`
 --
 ALTER TABLE `mitra`
-  MODIFY `idMitra` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idMitra` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `pengunjung`
+-- AUTO_INCREMENT for table `pengunjung`
 --
 ALTER TABLE `pengunjung`
   MODIFY `idPengunjung` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `kunjungan`
+-- Constraints for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD CONSTRAINT `fk_idMitra` FOREIGN KEY (`idMitra`) REFERENCES `mitra` (`idMitra`),
