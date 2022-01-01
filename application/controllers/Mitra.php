@@ -37,7 +37,7 @@ class Mitra extends CI_Controller
 		$this->form_validation->set_rules('noHpMitra', 'No Hp Mitra', 'required');
 		$this->form_validation->set_rules('jenisUsaha', 'Jenis Usaha', 'required');
 		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
-
+		$this->form_validation->set_rules('fotoUsaha', 'Foto Usaha', 'required');
 		if ($this->form_validation->run() == FALSE) {
 			$data['judul'] = "Form Input Mitra";
 
@@ -50,10 +50,10 @@ class Mitra extends CI_Controller
 				"upload_path" => './assets/uploads/',
 				"allowed_types" => 'gif|jpg|png',
 				"remove_spaces" => TRUE,
-				"file_name" => time() . '-' . $_FILES["uploadImage"]['name']
+				"file_name" => time() . '-' . $_FILES["fotoUsaha"]['name']
 			));
 			$this->load->library('upload', $initialize);
-			if (!$this->upload->do_upload('uploadImage')) {
+			if (!$this->upload->do_upload('fotoUsaha')) {
 				// KERJAKAN DISINI
 				$this->load->view('mitra');
 			} else {

@@ -30,9 +30,9 @@
                         <label for="deskripsi" class="form-label">Deskripsi Usaha</label>
                         <textarea type="text" class="form-control" id="deskripsi" rows="6" name="deskripsi"></textarea><small class="form-text text-danger"><?= form_error('deskripsi') ?></small>
                         <br>
-                        <label for="uploadImage" class="form-label">Foto Usaha</label>
+                        <label for="fotoUsaha" class="form-label">Foto Usaha</label>
                         <br>
-                        <input type="file" class="custom-file-input" id="uploadImage" name="uploadImage" accept='image/*' required></small>
+                        <input type="file" class="custom-file-input" id="fotoUsaha" name="fotoUsaha" accept='image/*' required></small>
                         <br><br>
                     </div>
                     <div class="float-end">

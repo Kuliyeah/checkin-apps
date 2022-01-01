@@ -32,6 +32,11 @@
                         <label for="deskripsi" class="form-label">Deskripsi Usaha</label>
                         <textarea type="text" class="form-control" id="deskripsi" rows="6" name="deskripsi"><?=$edit['jenisUsaha']?></textarea>
                         <br>
+
+                        <label for="fotoUsaha" class="form-label">Foto Usaha</label>
+                        <br>
+                        <input type="file" class="custom-file-input" id="fotoUsaha" name="fotoUsaha" accept='image/*' required><?=$edit['fotoUsaha']?></input>
+                        <br><br>                    
                     </div>
                     <div class="float-end">
                         <a class="btn btn-danger" id="back" href="<?= base_url() ?>mitra">Batalkan</a>

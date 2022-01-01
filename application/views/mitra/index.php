@@ -27,6 +27,7 @@
 									<th scope="col">No HP</th>
 									<th scope="col">Bidang Usaha</th>
 									<th scope="col" width="250px">Deskripsi</th>
+									<th scope="col">Foto Usaha</th>
 									<th scope="col">Status</th>
 									<th scope="col" width="125px">Opsi</th>
 								</tr>
@@ -42,6 +43,7 @@
 										<td><?php echo $data->noHpMitra ?></td>
 										<td><?php echo $data->jenisUsaha ?></td>
 										<td><?php echo $data->deskripsi ?></td>
+										<td><img src="<?php echo $data->fotoUsaha ?>"></td>
 										<td class="<?php if ($data->status == "Sudah Verifikasi") echo "text-success";
 													else echo "text-danger"; ?>"><?php echo $data->status ?></td>
 										<td>
