@@ -116,22 +116,22 @@
                             <div class="col-md-3 text-center">
                                 <h4>Total Kasus</h4>
                                 <h2 class=" lato-bold mt-3 mb-3" id="totalKasus">4.247.320</h2>
-                                <h6>+2048</h6>
+                                <h6>+20.748</h6>
                             </div>
                             <div class="col-md-3 text-center">
                                 <h4>Positif</h4>
                                 <h2 class="text-warning lato-bold mt-3 mb-3" id="positif">124.632</h2>
-                                <h6>2% dari total kasus</h6>
+                                <h6>0,10% dari total kasus</h6>
                             </div>
                             <div class="col-md-3 text-center">
                                 <h4>Sembuh</h4>
                                 <h2 class="text-success lato-bold mt-3 mb-3" id="sembuh">4.092.586</h2>
-                                <h6>96% dari total kasus</h6>
+                                <h6>96,52% dari total kasus</h6>
                             </div>
                             <div class="col-md-3 text-center">
                                 <h4>Meninggal</h4>
                                 <h2 class="text-danger lato-bold mt-3 mb-3" id="meninggal">143.519</h2>
-                                <h6>3% dari total kasus</h6>
+                                <h6>3,38% dari total kasus</h6>
                             </div>
                             <div class="col-md-12 text-center mt-5">
                                 <img src="assets/image/flag.png ">
