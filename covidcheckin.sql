@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Des 2021 pada 15.52
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 7.4.26
+-- Generation Time: Jan 02, 2022 at 03:16 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`idAdmin`, `namaAdmin`, `usernameAdmin`, `passwordAdmin`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`idAdmin`, `namaAdmin`, `usernameAdmin`, `passwordAdmin`) V
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kunjungan`
+-- Table structure for table `kunjungan`
 --
 
 CREATE TABLE `kunjungan` (
@@ -58,7 +58,7 @@ CREATE TABLE `kunjungan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kunjungan`
+-- Dumping data for table `kunjungan`
 --
 
 INSERT INTO `kunjungan` (`idKunjungan`, `idPengunjung`, `idMitra`, `tanggal`, `checkin`, `checkout`, `statusKunjungan`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `kunjungan` (`idKunjungan`, `idPengunjung`, `idMitra`, `tanggal`, `c
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mitra`
+-- Table structure for table `mitra`
 --
 
 CREATE TABLE `mitra` (
@@ -87,7 +87,7 @@ CREATE TABLE `mitra` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `mitra`
+-- Dumping data for table `mitra`
 --
 
 INSERT INTO `mitra` (`idMitra`, `namaMitra`, `alamatMitra`, `noHpMitra`, `jenisUsaha`, `deskripsi`, `fotoUsaha`, `status`) VALUES
@@ -101,7 +101,7 @@ INSERT INTO `mitra` (`idMitra`, `namaMitra`, `alamatMitra`, `noHpMitra`, `jenisU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengunjung`
+-- Table structure for table `pengunjung`
 --
 
 CREATE TABLE `pengunjung` (
@@ -115,7 +115,7 @@ CREATE TABLE `pengunjung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pengunjung`
+-- Dumping data for table `pengunjung`
 --
 
 INSERT INTO `pengunjung` (`idPengunjung`, `namaPengunjung`, `alamatPengunjung`, `noHpPengunjung`, `umurPengunjung`, `jenisKelaminPengunjung`, `statusKesehatan`) VALUES
@@ -131,13 +131,13 @@ INSERT INTO `pengunjung` (`idPengunjung`, `namaPengunjung`, `alamatPengunjung`, 
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`idAdmin`);
 
 --
--- Indeks untuk tabel `kunjungan`
+-- Indexes for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD PRIMARY KEY (`idKunjungan`),
@@ -145,51 +145,51 @@ ALTER TABLE `kunjungan`
   ADD KEY `fk_idMitra` (`idMitra`);
 
 --
--- Indeks untuk tabel `mitra`
+-- Indexes for table `mitra`
 --
 ALTER TABLE `mitra`
   ADD PRIMARY KEY (`idMitra`);
 
 --
--- Indeks untuk tabel `pengunjung`
+-- Indexes for table `pengunjung`
 --
 ALTER TABLE `pengunjung`
   ADD PRIMARY KEY (`idPengunjung`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `idAdmin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `kunjungan`
+-- AUTO_INCREMENT for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   MODIFY `idKunjungan` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `mitra`
+-- AUTO_INCREMENT for table `mitra`
 --
 ALTER TABLE `mitra`
   MODIFY `idMitra` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `pengunjung`
+-- AUTO_INCREMENT for table `pengunjung`
 --
 ALTER TABLE `pengunjung`
   MODIFY `idPengunjung` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `kunjungan`
+-- Constraints for table `kunjungan`
 --
 ALTER TABLE `kunjungan`
   ADD CONSTRAINT `fk_idMitra` FOREIGN KEY (`idMitra`) REFERENCES `mitra` (`idMitra`),
