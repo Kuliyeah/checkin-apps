@@ -116,7 +116,7 @@
                             <div class="col-md-3 text-center">
                                 <h4>Total Kasus</h4>
                                 <h2 class=" lato-bold mt-3 mb-3" id="totalKasus">4.247.320</h2>
-                                <h6>+20.748</h6>
+                                <h6>+20.748 kasus</h6>
                             </div>
                             <div class="col-md-3 text-center">
                                 <h4>Positif</h4>
