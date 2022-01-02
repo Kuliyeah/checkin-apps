@@ -45,33 +45,33 @@
     </header>
 
     <section id="login">
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form action="home/login" method="POST">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" placeholder="example" required>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="home/login" method="POST">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="********" required>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="example" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="********" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
-                        <input type="submit" class="btn btn-success" value="Login" id="login">
-                    </div>
-                </form>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                            <input type="submit" class="btn btn-success" value="Login" id="login">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <main>
         <img src="assets/image/virus2.png" class="bg-1 wow animate__animated animate__fadeIn">
         <img src="assets/image/virus3.png" class="bg-2 wow animate__animated animate__fadeIn">
@@ -83,8 +83,7 @@
                         <h5 class="text-danger lato-bold pt-5"><img src="assets/image/warning.svg"> COVID-19 ALERT</h5>
                         <h1 class="lato-bold mt-5 mb-5">Covid Check-in Apps</h1>
                         <h5 class="pe-5 me-5 mb-5">Aplikasi yang membantu kita dalam setiap kunjungan, sebagai media informasi untuk memantau kondisi sekitar khususnya tempat yang anda kunjungi. #StayHealth</h5>
-                        <a href="https://www.google.com/search?q=covid+19&ei=wz2FYcGYNf6Qxc8Pg62siA0&oq=covid+19&gs_lcp=Cgdnd3Mtd2l6EAMyCAgAEIAEELEDMgUIABCABDIECAAQAzIFCAAQgAQyCwgAEIAEELEDEIMBMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQsQMQgwE6BAgAEEM6EQguEIAEELEDEIMBEMcBENEDOgsILhCABBCxAxCDAToKCAAQsQMQgwEQQzoHCAAQsQMQQzoECC4QQzoNCAAQsQMQgwEQyQMQQzoFCAAQkgNKBAhBGABQAFjiDGCTD2gAcAB4AIABd4gB9gWSAQM1LjOYAQCgAQHAAQE&sclient=gws-wiz&ved=0ahUKEwiBhtjNtYH0AhV-SPEDHYMWC9EQ4dUDCA0&uact=5"
-                            class="btn btn-lg btn-success text-white nav_button" target="_blank">Lebih Tau</a>
+                        <a href="https://www.google.com/search?q=covid+19&ei=wz2FYcGYNf6Qxc8Pg62siA0&oq=covid+19&gs_lcp=Cgdnd3Mtd2l6EAMyCAgAEIAEELEDMgUIABCABDIECAAQAzIFCAAQgAQyCwgAEIAEELEDEIMBMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIICAAQsQMQgwE6BAgAEEM6EQguEIAEELEDEIMBEMcBENEDOgsILhCABBCxAxCDAToKCAAQsQMQgwEQQzoHCAAQsQMQQzoECC4QQzoNCAAQsQMQgwEQyQMQQzoFCAAQkgNKBAhBGABQAFjiDGCTD2gAcAB4AIABd4gB9gWSAQM1LjOYAQCgAQHAAQE&sclient=gws-wiz&ved=0ahUKEwiBhtjNtYH0AhV-SPEDHYMWC9EQ4dUDCA0&uact=5" class="btn btn-lg btn-success text-white nav_button" target="_blank">Lebih Tau</a>
                     </div>
                     <div class="col-md-6 wow animate__animated animate__fadeInRight">
                         <div id="carousel">
@@ -116,27 +115,27 @@
                         <div class="row ">
                             <div class="col-md-3 text-center">
                                 <h4>Total Kasus</h4>
-                                <h2 class=" lato-bold mt-3 mb-3">4.247.320</h2>
+                                <h2 class=" lato-bold mt-3 mb-3" id="totalKasus">4.247.320</h2>
                                 <h6>+2048</h6>
                             </div>
                             <div class="col-md-3 text-center">
                                 <h4>Positif</h4>
-                                <h2 class="text-warning lato-bold mt-3 mb-3">124.632</h2>
+                                <h2 class="text-warning lato-bold mt-3 mb-3" id="positif">124.632</h2>
                                 <h6>2% dari total kasus</h6>
                             </div>
                             <div class="col-md-3 text-center">
                                 <h4>Sembuh</h4>
-                                <h2 class="text-success lato-bold mt-3 mb-3">4.092.586</h2>
+                                <h2 class="text-success lato-bold mt-3 mb-3" id="sembuh">4.092.586</h2>
                                 <h6>96% dari total kasus</h6>
                             </div>
                             <div class="col-md-3 text-center">
                                 <h4>Meninggal</h4>
-                                <h2 class="text-danger lato-bold mt-3 mb-3">143.519</h2>
+                                <h2 class="text-danger lato-bold mt-3 mb-3" id="meninggal">143.519</h2>
                                 <h6>3% dari total kasus</h6>
                             </div>
                             <div class="col-md-12 text-center mt-5">
                                 <img src="assets/image/flag.png ">
-                                <span class="ps-2">Data oleh <a href="https://covid19.go.id/">covid19.go.id</a>. Diperbarui pada 04 November 2020</span>
+                                <span class="ps-2">Data oleh <a href="https://kawalcorona.com/">kawalcorona.com</a>. Diperbarui jam 19:39 pada tanggal 01 Januari 2022</span>
                             </div>
                         </div>
                     </div>
@@ -266,6 +265,22 @@
 
 <script>
     new WOW().init();
+
+    fetch('<?= base_url('assets/json/data.json') ?>')
+        .then(response => response.json())
+        .then(data => appendData(data));
+
+    function appendData(data) {
+        var totalKasus = document.getElementById("totalKasus");
+        var positif = document.getElementById("positif");
+        var sembuh = document.getElementById("sembuh");
+        var meninggal = document.getElementById("meninggal");
+
+        totalKasus.innerHTML = data[0].positif;
+        positif.innerHTML = data[0].dirawat;
+        sembuh.innerHTML = data[0].sembuh;
+        meninggal.innerHTML = data[0].meninggal;
+    }
 </script>
 
 </html>
