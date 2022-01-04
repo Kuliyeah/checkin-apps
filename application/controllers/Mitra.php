@@ -70,9 +70,6 @@ class Mitra extends CI_Controller
 				);
 				$this->session->set_flashdata('flash', 'Ditambahkan');
 				$result = $this->Mitra_model->tambah_mitra($data);
-				echo '<script type ="text/JavaScript">';
-				echo 'alert("Berhasil Input Mitra")';
-				echo '</script>';
 				if ($result) {
 					redirect(base_url() . 'mitra');
 				} else {
@@ -100,7 +97,7 @@ class Mitra extends CI_Controller
 			'jenisUsaha' => $this->input->post('jenisUsaha'),
 			'deskripsi' => $this->input->post('deskripsi'),
 			'fotoUsaha' => $this->input->post('fotoUsaha'),
-			'status' => 0
+			'status' => "Belum Verifikasi"
 		);
 
 		if ($this->form_validation->run() == FALSE) {

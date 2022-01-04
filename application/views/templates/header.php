@@ -59,7 +59,7 @@
                 <div class="button-menu">
                     <ul>
                         <li id="keluar" class="">
-                            <a href="home/logout" class="out bg-danger text-white">
+                            <a href="<?= base_url(); ?>home/logout" class="out bg-danger text-white">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <div class="position-absolute tooltips bg-danger text-white">Logout</div>
                             </a>
