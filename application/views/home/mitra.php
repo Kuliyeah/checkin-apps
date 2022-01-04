@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="<?=base_url()?>/node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="<?=base_url()?>/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="<?=base_url()?>/node_modules/animate.css/animate.css">
-    <link rel="stylesheet" href="<?=base_url()?>/assets/css/style.css">
-    <link rel="stylesheet" href="<?=base_url()?>/assets/css/font.css">
+
+    <link rel="stylesheet" href="<?= base_url() ?>/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/node_modules/animate.css/animate.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/assets/css/font.css">
 
     <title>Go Cek-In</title>
 </head>
@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
             <div class="container">
-                <a class="navbar-brand" href="../"><img src="<?=base_url()?>/assets/image/icon.png" alt="Go Check-In" width="65.22px" height="61.41px"></a>
+                <a class="navbar-brand" href="../"><img src="<?= base_url() ?>/assets/image/icon.png" alt="Go Check-In" width="65.22px" height="61.41px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -46,9 +46,17 @@
 
     <main>
         <section>
-        <div class="mt-2 col-md-4 mx-auto">
+            <div class="mt-2 col-md-4 mx-auto">
+
                 <form class="row justify-content-center" method="post" action="<?= base_url() ?>mitra/tambahMitraHome">
+
                     <div style="margin-top:100px;">
+                        <?php if ($this->session->flashdata('flash')) : ?>
+                            <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                                Data <strong>BERHASIL</strong> <?php echo $this->session->flashdata('flash') ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php endif; ?>
                         <h5 class="text-center mt-5 mb-4"><i>"Berkontribusilah bagi kesehatan bersama"</i></h5>
                         <label for="namaMitra" class="form-label">Nama Mitra</label>
                         <input type="text" class="form-control" id="namaMitra" name="namaMitra"><small class="form-text text-danger"><?= form_error('namaMitra') ?></small>
@@ -73,7 +81,7 @@
                         <label for="foto" class="form-label">Foto Usaha</label>
                         <br>
                         <input type="file" name="fotoUsaha" size="20"><small class="form-text text-danger"><?= form_error('fotoUsaha') ?></small>
-                        <br><br>   
+                        <br><br>
                     </div>
                     <div class="float-end mb-5">
                         <a class="btn btn-danger" id="back" href="<?= base_url() ?>">Batalkan</a>
@@ -87,7 +95,7 @@
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="<?=base_url()?>home/login" method="POST">
+                <form action="<?= base_url() ?>home/login" method="POST">
                     <div class="modal-header">
                         <h5 class="modal-title" id="loginModalLabel">Login</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

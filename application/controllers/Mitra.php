@@ -104,9 +104,7 @@ class Mitra extends CI_Controller
 			$this->load->view('home/mitra');
 		} else {
 			$this->Mitra_model->tambah_mitra($data);
-			echo '<script type ="text/JavaScript">';
-			echo 'alert("Berhasil Input Mitra")';
-			echo '</script>';
+			$this->session->set_flashdata('flash', 'DiInput, Status akan diverifikasi oleh admin. Silakan cek 1x24 jam');
 			$this->load->view('home/mitra');
 		}
 	}
