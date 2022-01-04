@@ -32,7 +32,7 @@
                         <br>
                         <label for="fotoUsaha" class="form-label">Foto Usaha</label>
                         <br>
-                        <input type="file" class="custom-file-input" id="fotoUsaha" name="fotoUsaha" accept='image/*' required></small>
+                        <input type="file" class="custom-file-input" id="fotoUsaha" name="fotoUsaha" accept='image/*'></small>
                         <br><br>
                     </div>
                     <div class="float-end">
