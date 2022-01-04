@@ -17,7 +17,8 @@
 								Data <strong>BERHASIL</strong> <?php echo $this->session->flashdata('flash') ?>
 								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 							</div>
-						<?php endif; ?>
+						<?php $this->session->unset_userdata('flash');
+					endif; ?>
 						<table id="example" class="table table-bordered table-hover">
 							<thead>
 								<tr>

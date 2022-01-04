@@ -48,16 +48,19 @@
         <section>
             <div class="mt-2 col-md-4 mx-auto">
 
-                <form class="row justify-content-center" method="post" action="<?= base_url() ?>mitra/tambahMitraHome">
+                <form class="row justify-content-center" method="post" action="<?= base_url() ?>mitra/tambahMitraHome" enctype='multipart/form-data'>
 
                     <div style="margin-top:100px;">
+                    
+                        <h5 class="text-center mt-5 mb-4"><i>"Berkontribusilah bagi kesehatan bersama"</i></h5>
+                        
                         <?php if ($this->session->flashdata('flash')) : ?>
                             <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
                                 Data <strong>BERHASIL</strong> <?php echo $this->session->flashdata('flash') ?>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                        <?php endif; ?>
-                        <h5 class="text-center mt-5 mb-4"><i>"Berkontribusilah bagi kesehatan bersama"</i></h5>
+                        <?php $this->session->unset_userdata('flash');
+                        endif; ?>
                         <label for="namaMitra" class="form-label">Nama Mitra</label>
                         <input type="text" class="form-control" id="namaMitra" name="namaMitra"><small class="form-text text-danger"><?= form_error('namaMitra') ?></small>
                         <br>
@@ -78,9 +81,9 @@
                         <label for="deskripsi" class="form-label">Deskripsi Usaha</label>
                         <textarea type="text" class="form-control" id="deskripsi" rows="6" name="deskripsi"></textarea><small class="form-text text-danger"><?= form_error('deskripsi') ?></small>
                         <br>
-                        <label for="foto" class="form-label">Foto Usaha</label>
+                        <label for="fotoUsaha" class="form-label">Foto Usaha</label>
                         <br>
-                        <input type="file" name="fotoUsaha" size="20"><small class="form-text text-danger"><?= form_error('fotoUsaha') ?></small>
+                        <input type="file" class="custom-file-input" id="fotoUsaha" name="fotoUsaha" accept='image/*'><?= form_error('fotoUsaha') ?></small>
                         <br><br>
                     </div>
                     <div class="float-end mb-5">

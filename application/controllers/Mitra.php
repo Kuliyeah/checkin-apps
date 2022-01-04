@@ -83,29 +83,51 @@ class Mitra extends CI_Controller
 
 	public function tambahMitraHome()
 	{
+		
 		$this->form_validation->set_rules('namaMitra', 'Nama Mitra', 'required');
 		$this->form_validation->set_rules('alamatMitra', 'Alamat Mitra', 'required');
 		$this->form_validation->set_rules('noHpMitra', 'No Hp Mitra', 'required');
 		$this->form_validation->set_rules('jenisUsaha', 'Jenis Usaha', 'required');
 		$this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
-		$this->form_validation->set_rules('fotoUsaha', 'Foto Usaha', 'required');
-
-		$data = array(
-			'namaMitra' => $this->input->post('namaMitra'),
-			'alamatMitra' => $this->input->post('alamatMitra'),
-			'noHpMitra' => $this->input->post('noHpMitra'),
-			'jenisUsaha' => $this->input->post('jenisUsaha'),
-			'deskripsi' => $this->input->post('deskripsi'),
-			'fotoUsaha' => $this->input->post('fotoUsaha'),
-			'status' => "Belum Verifikasi"
-		);
-
+		// $this->form_validation->set_rules('fotoUsaha', 'Foto Usaha', 'required');
 		if ($this->form_validation->run() == FALSE) {
+			$data['judul'] = "Form Input Mitra";
+
 			$this->load->view('home/mitra');
 		} else {
-			$this->Mitra_model->tambah_mitra($data);
-			$this->session->set_flashdata('flash', 'DiInput, Status akan diverifikasi oleh admin. Silakan cek 1x24 jam');
-			$this->load->view('home/mitra');
+
+			$initialize = $this->upload->initialize(array(
+				"upload_path" => './assets/uploads/',
+				"allowed_types" => 'gif|jpg|png',
+				"remove_spaces" => TRUE,
+				"file_name" => time() . '-' . $_FILES["fotoUsaha"]['name']
+			));
+			$this->load->library('upload', $initialize);
+			if (!$this->upload->do_upload('fotoUsaha')) {
+				// KERJAKAN DISINI
+				$this->load->view('home/mitra');
+			} else {
+				$data = $this->upload->data();
+				$imagename = $data['file_name'];
+				$data = array(
+					'namaMitra' => $this->input->post('namaMitra'),
+					'alamatMitra' => $this->input->post('alamatMitra'),
+					'noHpMitra' => $this->input->post('noHpMitra'),
+					'jenisUsaha' => $this->input->post('jenisUsaha'),
+					'deskripsi' => $this->input->post('deskripsi'),
+					'fotoUsaha' => $imagename,
+					'status' => "Belum Verifikasi"
+				);
+				$this->session->set_flashdata('flash', 'Di Input. Status Akan Diverifikasi Dalam 1x24 Jam');
+				$result = $this->Mitra_model->tambah_mitra($data);
+				if ($result) {
+					$this->load->view('home/mitra');
+				} else {
+					//KERJAKAN DISINI
+					$data['error_message'] = 'Error Gan!!';
+					$this->load->view('home/mitra');
+				}
+			}
 		}
 	}
 
