@@ -153,7 +153,6 @@ class Mitra extends CI_Controller
 			'jenisUsaha' => $this->input->post('jenisUsaha'),
 			'deskripsi' => $this->input->post('deskripsi'),
 			'fotoUsaha' => $this->input->post('fotoUsaha'),
-			'status' => $this->input->post('status')
 		);
 
 		$this->session->set_flashdata('flash', 'Diupdate');
